@@ -1,0 +1,1012 @@
+{
+  "generatedAt": "2026-10-21T12:33:50.939014+00:00",
+  "discoveredEventIdsByState": {
+    "canceled": 82011329,
+    "finished": 67599823,
+    "notstarted": 28606880
+  },
+  "summary": {
+    "totalTests": 51,
+    "byVerdict": {
+      "PASS": 31,
+      "PASS_EMPTY": 14,
+      "EXPECTED": 6
+    },
+    "byCategory": {
+      "event_state_variation": 18,
+      "entity_variation": 4,
+      "pagination_edge": 14,
+      "limit_variation": 4,
+      "status_filter": 6,
+      "enrichment_type_variation": 5
+    }
+  },
+  "tests": [
+    {
+      "category": "event_state_variation",
+      "name": "canceled event detail",
+      "path": "event/82011329",
+      "params": null,
+      "http": 200,
+      "meta": {
+        "topKeys": [
+          "event"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "eventId=82011329"
+    },
+    {
+      "category": "event_state_variation",
+      "name": "canceled event/lineups",
+      "path": "event/82011329/lineups",
+      "params": null,
+      "http": 200,
+      "meta": {
+        "topKeys": [
+          "home",
+          "away"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "eventId=82011329"
+    },
+    {
+      "category": "event_state_variation",
+      "name": "canceled event/statistics",
+      "path": "event/82011329/statistics",
+      "params": null,
+      "http": 200,
+      "meta": {
+        "topKeys": [
+          "statistics",
+          "inconsistencies"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "eventId=82011329"
+    },
+    {
+      "category": "event_state_variation",
+      "name": "canceled event/at-bats",
+      "path": "event/82011329/at-bats",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "atBats",
+        "count": 0,
+        "page": 1,
+        "limit": 5,
+        "total": 0,
+        "totalPages": 0,
+        "hasMore": false
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "eventId=82011329"
+    },
+    {
+      "category": "event_state_variation",
+      "name": "canceled event/top-performers",
+      "path": "event/82011329/top-performers",
+      "params": null,
+      "http": 200,
+      "meta": {
+        "topKeys": [
+          "topPerformers"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "eventId=82011329"
+    },
+    {
+      "category": "event_state_variation",
+      "name": "canceled event/best-players",
+      "path": "event/82011329/best-players",
+      "params": null,
+      "http": 404,
+      "meta": {
+        "topKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "details",
+          "path",
+          "timestamp",
+          "requestId"
+        ]
+      },
+      "verdict": "EXPECTED",
+      "notes": "eventId=82011329"
+    },
+    {
+      "category": "event_state_variation",
+      "name": "finished event detail",
+      "path": "event/67599823",
+      "params": null,
+      "http": 200,
+      "meta": {
+        "topKeys": [
+          "event"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "eventId=67599823"
+    },
+    {
+      "category": "event_state_variation",
+      "name": "finished event/lineups",
+      "path": "event/67599823/lineups",
+      "params": null,
+      "http": 200,
+      "meta": {
+        "topKeys": [
+          "home",
+          "away"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "eventId=67599823"
+    },
+    {
+      "category": "event_state_variation",
+      "name": "finished event/statistics",
+      "path": "event/67599823/statistics",
+      "params": null,
+      "http": 200,
+      "meta": {
+        "topKeys": [
+          "statistics",
+          "inconsistencies"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "eventId=67599823"
+    },
+    {
+      "category": "event_state_variation",
+      "name": "finished event/at-bats",
+      "path": "event/67599823/at-bats",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "atBats",
+        "count": 5,
+        "page": 1,
+        "limit": 5,
+        "total": 70,
+        "totalPages": 14,
+        "hasMore": true
+      },
+      "verdict": "PASS",
+      "notes": "eventId=67599823"
+    },
+    {
+      "category": "event_state_variation",
+      "name": "finished event/top-performers",
+      "path": "event/67599823/top-performers",
+      "params": null,
+      "http": 200,
+      "meta": {
+        "topKeys": [
+          "topPerformers"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "eventId=67599823"
+    },
+    {
+      "category": "event_state_variation",
+      "name": "finished event/best-players",
+      "path": "event/67599823/best-players",
+      "params": null,
+      "http": 404,
+      "meta": {
+        "topKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "details",
+          "path",
+          "timestamp",
+          "requestId"
+        ]
+      },
+      "verdict": "EXPECTED",
+      "notes": "eventId=67599823"
+    },
+    {
+      "category": "event_state_variation",
+      "name": "notstarted event detail",
+      "path": "event/28606880",
+      "params": null,
+      "http": 200,
+      "meta": {
+        "topKeys": [
+          "event"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "eventId=28606880"
+    },
+    {
+      "category": "event_state_variation",
+      "name": "notstarted event/lineups",
+      "path": "event/28606880/lineups",
+      "params": null,
+      "http": 200,
+      "meta": {
+        "topKeys": [
+          "home",
+          "away"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "eventId=28606880"
+    },
+    {
+      "category": "event_state_variation",
+      "name": "notstarted event/statistics",
+      "path": "event/28606880/statistics",
+      "params": null,
+      "http": 200,
+      "meta": {
+        "topKeys": [
+          "statistics",
+          "inconsistencies"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "eventId=28606880"
+    },
+    {
+      "category": "event_state_variation",
+      "name": "notstarted event/at-bats",
+      "path": "event/28606880/at-bats",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "atBats",
+        "count": 0,
+        "page": 1,
+        "limit": 5,
+        "total": 0,
+        "totalPages": 0,
+        "hasMore": false
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "eventId=28606880"
+    },
+    {
+      "category": "event_state_variation",
+      "name": "notstarted event/top-performers",
+      "path": "event/28606880/top-performers",
+      "params": null,
+      "http": 200,
+      "meta": {
+        "topKeys": [
+          "topPerformers"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "eventId=28606880"
+    },
+    {
+      "category": "event_state_variation",
+      "name": "notstarted event/best-players",
+      "path": "event/28606880/best-players",
+      "params": null,
+      "http": 404,
+      "meta": {
+        "topKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "details",
+          "path",
+          "timestamp",
+          "requestId"
+        ]
+      },
+      "verdict": "EXPECTED",
+      "notes": "eventId=28606880"
+    },
+    {
+      "category": "entity_variation",
+      "name": "team events last (Yankees)",
+      "path": "team/84917477/events/last",
+      "params": {
+        "page": 1,
+        "limit": 3
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "events",
+        "count": 3,
+        "page": 1,
+        "limit": 3,
+        "total": 2123,
+        "totalPages": 708,
+        "hasMore": true
+      },
+      "verdict": "PASS",
+      "notes": ""
+    },
+    {
+      "category": "entity_variation",
+      "name": "team events last (Rays)",
+      "path": "team/20869353/events/last",
+      "params": {
+        "page": 1,
+        "limit": 3
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "events",
+        "count": 3,
+        "page": 1,
+        "limit": 3,
+        "total": 2081,
+        "totalPages": 694,
+        "hasMore": true
+      },
+      "verdict": "PASS",
+      "notes": ""
+    },
+    {
+      "category": "entity_variation",
+      "name": "player events last (Ohtani)",
+      "path": "player/71698966/events/last",
+      "params": {
+        "page": 1,
+        "limit": 3
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "events",
+        "count": 3,
+        "page": 1,
+        "limit": 3,
+        "total": 1253,
+        "totalPages": 418,
+        "hasMore": true
+      },
+      "verdict": "PASS",
+      "notes": ""
+    },
+    {
+      "category": "entity_variation",
+      "name": "player events last (Volpe)",
+      "path": "player/39625815/events/last",
+      "params": {
+        "page": 1,
+        "limit": 3
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "events",
+        "count": 3,
+        "page": 1,
+        "limit": 3,
+        "total": 615,
+        "totalPages": 205,
+        "hasMore": true
+      },
+      "verdict": "PASS",
+      "notes": ""
+    },
+    {
+      "category": "pagination_edge",
+      "name": "events (small total ~18)",
+      "path": "events",
+      "params": {
+        "page": 2000,
+        "limit": 5
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "items",
+        "count": 0,
+        "page": 2000,
+        "limit": 5,
+        "total": 18,
+        "totalPages": 4,
+        "hasMore": false
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404)."
+    },
+    {
+      "category": "pagination_edge",
+      "name": "events last page (4)",
+      "path": "events",
+      "params": {
+        "page": 4,
+        "limit": 5
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "items",
+        "count": 3,
+        "page": 4,
+        "limit": 5,
+        "total": 18,
+        "totalPages": 4,
+        "hasMore": false
+      },
+      "verdict": "PASS",
+      "notes": ""
+    },
+    {
+      "category": "pagination_edge",
+      "name": "events page 5 beyond totalPages",
+      "path": "events",
+      "params": {
+        "page": 5,
+        "limit": 5
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "items",
+        "count": 0,
+        "page": 5,
+        "limit": 5,
+        "total": 18,
+        "totalPages": 4,
+        "hasMore": false
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404)."
+    },
+    {
+      "category": "pagination_edge",
+      "name": "players page 2000 (totalPages ~1952)",
+      "path": "players",
+      "params": {
+        "page": 2000,
+        "limit": 5
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "items",
+        "count": 0,
+        "page": 2000,
+        "limit": 5,
+        "total": 9758,
+        "totalPages": 1952,
+        "hasMore": false
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404)."
+    },
+    {
+      "category": "pagination_edge",
+      "name": "players page 1952 (last)",
+      "path": "players",
+      "params": {
+        "page": 1952,
+        "limit": 5
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "items",
+        "count": 3,
+        "page": 1952,
+        "limit": 5,
+        "total": 9758,
+        "totalPages": 1952,
+        "hasMore": false
+      },
+      "verdict": "PASS",
+      "notes": ""
+    },
+    {
+      "category": "pagination_edge",
+      "name": "players page 1953 beyond",
+      "path": "players",
+      "params": {
+        "page": 1953,
+        "limit": 5
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "items",
+        "count": 0,
+        "page": 1953,
+        "limit": 5,
+        "total": 9758,
+        "totalPages": 1952,
+        "hasMore": false
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404)."
+    },
+    {
+      "category": "pagination_edge",
+      "name": "team events last page 2000 (totalPages ~425)",
+      "path": "team/84917477/events/last",
+      "params": {
+        "page": 2000,
+        "limit": 5
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "events",
+        "count": 0,
+        "page": 2000,
+        "limit": 5,
+        "total": 2123,
+        "totalPages": 425,
+        "hasMore": false
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404)."
+    },
+    {
+      "category": "pagination_edge",
+      "name": "team events last page 425",
+      "path": "team/84917477/events/last",
+      "params": {
+        "page": 425,
+        "limit": 5
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "events",
+        "count": 3,
+        "page": 425,
+        "limit": 5,
+        "total": 2123,
+        "totalPages": 425,
+        "hasMore": false
+      },
+      "verdict": "PASS",
+      "notes": ""
+    },
+    {
+      "category": "pagination_edge",
+      "name": "team events last page 426",
+      "path": "team/84917477/events/last",
+      "params": {
+        "page": 426,
+        "limit": 5
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "events",
+        "count": 0,
+        "page": 426,
+        "limit": 5,
+        "total": 2123,
+        "totalPages": 425,
+        "hasMore": false
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404)."
+    },
+    {
+      "category": "pagination_edge",
+      "name": "at-bats page 2000 (totalPages ~14)",
+      "path": "event/67599823/at-bats",
+      "params": {
+        "page": 2000,
+        "limit": 5
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "atBats",
+        "count": 0,
+        "page": 2000,
+        "limit": 5,
+        "total": 70,
+        "totalPages": 14,
+        "hasMore": false
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404)."
+    },
+    {
+      "category": "pagination_edge",
+      "name": "at-bats last page 14",
+      "path": "event/67599823/at-bats",
+      "params": {
+        "page": 14,
+        "limit": 5
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "atBats",
+        "count": 5,
+        "page": 14,
+        "limit": 5,
+        "total": 70,
+        "totalPages": 14,
+        "hasMore": false
+      },
+      "verdict": "PASS",
+      "notes": ""
+    },
+    {
+      "category": "pagination_edge",
+      "name": "ut events page 2000 (totalPages ~2927)",
+      "path": "unique-tournament/53168725/events",
+      "params": {
+        "page": 2000,
+        "limit": 10
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "events",
+        "count": 10,
+        "page": 2000,
+        "limit": 10,
+        "total": 29267,
+        "totalPages": 2927,
+        "hasMore": true
+      },
+      "verdict": "PASS",
+      "notes": ""
+    },
+    {
+      "category": "pagination_edge",
+      "name": "ut events page 2927",
+      "path": "unique-tournament/53168725/events",
+      "params": {
+        "page": 2927,
+        "limit": 10
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "events",
+        "count": 7,
+        "page": 2927,
+        "limit": 10,
+        "total": 29267,
+        "totalPages": 2927,
+        "hasMore": false
+      },
+      "verdict": "PASS",
+      "notes": ""
+    },
+    {
+      "category": "pagination_edge",
+      "name": "ut events page 2928",
+      "path": "unique-tournament/53168725/events",
+      "params": {
+        "page": 2928,
+        "limit": 10
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "events",
+        "count": 0,
+        "page": 2928,
+        "limit": 10,
+        "total": 29267,
+        "totalPages": 2927,
+        "hasMore": false
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404)."
+    },
+    {
+      "category": "limit_variation",
+      "name": "events limit=1",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 1
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "items",
+        "count": 1,
+        "page": 1,
+        "limit": 1,
+        "total": 18,
+        "totalPages": 18,
+        "hasMore": true
+      },
+      "verdict": "PASS",
+      "notes": ""
+    },
+    {
+      "category": "limit_variation",
+      "name": "events limit=100",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 100
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "items",
+        "count": 18,
+        "page": 1,
+        "limit": 100,
+        "total": 18,
+        "totalPages": 1,
+        "hasMore": false
+      },
+      "verdict": "PASS",
+      "notes": ""
+    },
+    {
+      "category": "limit_variation",
+      "name": "events limit=2000",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 2000
+      },
+      "http": 400,
+      "meta": {
+        "topKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "path",
+          "timestamp",
+          "requestId"
+        ]
+      },
+      "verdict": "EXPECTED",
+      "notes": ""
+    },
+    {
+      "category": "limit_variation",
+      "name": "search limit=2000",
+      "path": "search",
+      "params": {
+        "q": "a",
+        "page": 1,
+        "limit": 2000
+      },
+      "http": 400,
+      "meta": {
+        "topKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "path",
+          "timestamp",
+          "requestId"
+        ]
+      },
+      "verdict": "EXPECTED",
+      "notes": ""
+    },
+    {
+      "category": "status_filter",
+      "name": "events status=finished",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 5,
+        "status": "finished"
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "items",
+        "count": 0,
+        "page": 1,
+        "limit": 5,
+        "total": 0,
+        "totalPages": 0,
+        "hasMore": false
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": ""
+    },
+    {
+      "category": "status_filter",
+      "name": "events status=inprogress",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 5,
+        "status": "inprogress"
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "items",
+        "count": 0,
+        "page": 1,
+        "limit": 5,
+        "total": 0,
+        "totalPages": 0,
+        "hasMore": false
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": ""
+    },
+    {
+      "category": "status_filter",
+      "name": "events status=notstarted",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 5,
+        "status": "notstarted"
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "items",
+        "count": 5,
+        "page": 1,
+        "limit": 5,
+        "total": 18,
+        "totalPages": 4,
+        "hasMore": true
+      },
+      "verdict": "PASS",
+      "notes": ""
+    },
+    {
+      "category": "status_filter",
+      "name": "events status=canceled",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 5,
+        "status": "canceled"
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "items",
+        "count": 0,
+        "page": 1,
+        "limit": 5,
+        "total": 0,
+        "totalPages": 0,
+        "hasMore": false
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": ""
+    },
+    {
+      "category": "status_filter",
+      "name": "events status=postponed",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 5,
+        "status": "postponed"
+      },
+      "http": 200,
+      "meta": {
+        "listKey": "items",
+        "count": 0,
+        "page": 1,
+        "limit": 5,
+        "total": 0,
+        "totalPages": 0,
+        "hasMore": false
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": ""
+    },
+    {
+      "category": "status_filter",
+      "name": "events status=ended",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 5,
+        "status": "ended"
+      },
+      "http": 400,
+      "meta": {
+        "topKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "path",
+          "timestamp",
+          "requestId"
+        ]
+      },
+      "verdict": "EXPECTED",
+      "notes": ""
+    },
+    {
+      "category": "enrichment_type_variation",
+      "name": "event enrichments/h2h_events",
+      "path": "event/67599823/enrichments/h2h_events",
+      "params": null,
+      "http": 200,
+      "meta": {
+        "listKey": "events",
+        "count": 10,
+        "page": 1,
+        "limit": 10,
+        "total": 219,
+        "totalPages": 22,
+        "hasMore": true
+      },
+      "verdict": "PASS",
+      "notes": ""
+    },
+    {
+      "category": "enrichment_type_variation",
+      "name": "event enrichments/highlights",
+      "path": "event/67599823/enrichments/highlights",
+      "params": null,
+      "http": 200,
+      "meta": {
+        "topKeys": [
+          "highlights",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": ""
+    },
+    {
+      "category": "enrichment_type_variation",
+      "name": "event enrichments/series",
+      "path": "event/67599823/enrichments/series",
+      "params": null,
+      "http": 200,
+      "meta": {
+        "listKey": "events",
+        "count": 3,
+        "page": 1,
+        "limit": 10,
+        "total": 3,
+        "totalPages": 1,
+        "hasMore": false
+      },
+      "verdict": "PASS",
+      "notes": ""
+    },
+    {
+      "category": "enrichment_type_variation",
+      "name": "event enrichments/team_streaks",
+      "path": "event/67599823/enrichments/team_streaks",
+      "params": null,
+      "http": 200,
+      "meta": {
+        "topKeys": [
+          "general",
+          "generalPerLastX",
+          "generalTotal",
+          "head2head",
+          "head2HeadPerLastX",
+          "head2HeadTotal"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": ""
+    },
+    {
+      "category": "enrichment_type_variation",
+      "name": "event enrichments/votes",
+      "path": "event/67599823/enrichments/votes",
+      "params": null,
+      "http": 200,
+      "meta": {
+        "topKeys": [
+          "bothTeamsToScoreVote",
+          "firstTeamToScoreVote",
+          "vote",
+          "whoShouldHaveWonVote"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": ""
+    }
+  ]
+}

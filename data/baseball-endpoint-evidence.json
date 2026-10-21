@@ -1,0 +1,2600 @@
+{
+  "generatedAt": "2026-10-21T12:31:40.219870+00:00",
+  "baseUrl": "https://sports-api.sportsdata365.com/msdata",
+  "sport": "baseball",
+  "routeCount": 42,
+  "discoveredIds": {
+    "date": "2026-10-21",
+    "enrichmentType": "h2h_events",
+    "managerId": 62643844,
+    "lineupPlayerId": 39625815,
+    "teamId": 84917477,
+    "playerId": 71698966,
+    "tournamentId": 53168725,
+    "eventId": 67599823,
+    "seasonId": 68144200,
+    "teamEnrichmentType": "events_last",
+    "playerIdForEventStats": 39625815
+  },
+  "routes": [
+    {
+      "routeTemplate": "/v1/baseball/event/{eventId}",
+      "calledPath": "event/67599823",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 4959,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 4959,
+        "responseKind": "match object",
+        "topLevelKeys": [
+          "event"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": [
+          "id",
+          "homeTeam",
+          "awayTeam",
+          "tournament",
+          "season",
+          "roundInfo",
+          "status",
+          "statusType",
+          "startTimestamp",
+          "endTimestamp",
+          "sourceUpdatedAt",
+          "homeScore",
+          "awayScore",
+          "format",
+          "winnerCode",
+          "venue",
+          "time",
+          "hasGlobalHighlights",
+          "finalResultOnly",
+          "toss",
+          "officials"
+        ],
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"event\": {\"id\": 67599823, \"homeTeam\": {\"id\": 84917477, \"name\": \"New York Yankees\", \"shortName\": \"Yankees\", \"fullName\": null, \"nameCode\": \"NYY\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 73341, \"sport\": {\"name\": \"Baseball\"}, \"country\": {\"name\": \"USA\", \"alpha2\": \"US\", \"alpha3\": \"USA\"}, \"teamColors\": {\"primary\": \"#000066\", \"secondary\": \"#000066\", \"text\": \"#000066\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0646\\u064a\\u0648\\u064a\\u0648\\u0631\\u0643 \\u064a\\u0627\\u0646\\u0643\\u064a\\u0632\", \"ru\": \"\\u041d\\u044c\\u044e-\\u0419\\u043e\\u0440\\u043a \\u042f\\u043d\\u043a\\u0438\\u0437\"}, \"shortNameTranslation\": {\"ar\": \"\\u064a\\u0627\\u0646\\u0643\\u064a\\u0632\", \"bn\": \"\\u0987\\u09af\\u09bc\\u09be\\u0999\\u09cd\\u0995\\u09bf\\u09b8\", \"hi\": \"\\u092f\\u093e\\u0902\\u0915\\u0940\\u091c\", \"ru\": \"\\u042f\\u043d\\u043a\\u0438\\u0437\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"awayTeam\": {\"id\": 20869353, \"name\": \"Tampa Bay Rays\", \"shortName\": \"Rays\", \"fullName\": null, \"nameCode\": \"TB\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 37707, \"sport\": \u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/event/{eventId}/at-bats",
+      "calledPath": "event/67599823/at-bats",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 1445,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 1445,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "atBats",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "atBats",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 70,
+          "totalPages": 14,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "sequence",
+          "inning",
+          "inningHalf",
+          "pitcher",
+          "hitter",
+          "winProbability",
+          "occurredAt"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"atBats\": [{\"sequence\": 1, \"inning\": 1, \"inningHalf\": \"T\", \"pitcher\": {\"id\": 62780693, \"name\": \"Max Fried\", \"teamId\": 84917477}, \"hitter\": {\"id\": 16122589, \"name\": \"Yandy D\\u00edaz\", \"teamId\": 20869353}, \"winProbability\": {\"homeStart\": 60.1, \"awayStart\": 39.9, \"home\": 57, \"away\": 43}, \"occurredAt\": \"1791418170\"}, {\"sequence\": 2, \"inning\": 1, \"inningHalf\": \"T\", \"pitcher\": {\"id\": 62780693, \"name\": \"Max Fried\", \"teamId\": 84917477}, \"hitter\": {\"id\": 20193865, \"name\": \"Jonathan Aranda\", \"teamId\": 20869353}, \"winProbability\": {\"homeStart\": 57, \"awayStart\": 43, \"home\": 64.5, \"away\": 35.5}, \"occurredAt\": \"1791418278\"}, {\"sequence\": 3, \"inning\": 1, \"inningHalf\": \"T\", \"pitcher\": {\"id\": 62780693, \"name\": \"Max Fried\", \"teamId\": 84917477}, \"hitter\": {\"id\": 30699147, \"name\": \"Junior Caminero\", \"teamId\": 20869353}, \"winProbability\": {\"homeStart\": 64.5, \"awayStart\": 35.5, \"home\": 66.3, \"away\": 33.7}, \"occurredAt\": \"1791418447\"}, {\"sequence\": 4, \"inning\": 1, \"inningHalf\": \"B\", \"pitcher\": {\"id\": 79861100, \"name\": \"Nick Martinez\", \"teamId\": 20869353}, \"hitter\": {\"id\": 72392784, \"name\": \"Trent Grisham\", \"teamId\": 84917477}, \"winProbability\": {\"homeStart\": 66.3, \"awayStart\": 33.7, \"home\": 63.9, \"away\"\u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/event/{eventId}/best-players",
+      "calledPath": "event/67599823/best-players",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 404,
+      "bytes": 334,
+      "error": "Enrichment \"best_players\" for baseball match 67599823 was not found.",
+      "classification": {
+        "http": 404,
+        "bytes": 334,
+        "responseKind": "error envelope",
+        "topLevelKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "details",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": {
+          "statusCode": 404,
+          "message": "Enrichment \"best_players\" for baseball match 67599823 was not found.",
+          "error": "NotFound",
+          "details": {
+            "code": "ENRICHMENT_NOT_FOUND",
+            "reason": "no_data_recorded"
+          }
+        },
+        "notes": []
+      },
+      "bodyPreview": "{\"statusCode\": 404, \"message\": \"Enrichment \\\"best_players\\\" for baseball match 67599823 was not found.\", \"error\": \"NotFound\", \"details\": {\"code\": \"ENRICHMENT_NOT_FOUND\", \"reason\": \"no_data_recorded\"}, \"path\": \"/api/v1/baseball/event/67599823/best-players\", \"timestamp\": \"2026-10-21T12:31:17.431Z\", \"requestId\": \"0dc2eb7e-ceed-487b-97aa-0cd3bc37404b\"}"
+    },
+    {
+      "routeTemplate": "/v1/baseball/event/{eventId}/enrichments",
+      "calledPath": "event/67599823/enrichments",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 604,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 604,
+        "responseKind": "list envelope",
+        "topLevelKeys": [
+          "types"
+        ],
+        "listKey": "types",
+        "listCount": 5,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "type",
+          "useCase"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"types\": [{\"type\": \"h2h_events\", \"useCase\": \"The past meetings themselves, as a paged event list. For win/draw/loss counts instead, use GET .../event/:id/h2h \\u2014 it returns summary totals, not matches.\"}, {\"type\": \"highlights\", \"useCase\": \"Highlight / video links. Fetch via GET .../enrichments/highlights.\"}, {\"type\": \"series\", \"useCase\": \"Series or playoff event ids. Fetch via GET .../enrichments/series.\"}, {\"type\": \"team_streaks\", \"useCase\": \"Win/loss streaks around this match. Dedicated route: GET .../event/:id/team-streaks.\"}, {\"type\": \"votes\", \"useCase\": \"Fan vote totals. Fetch via GET .../enrichments/votes.\"}]}"
+    },
+    {
+      "routeTemplate": "/v1/baseball/event/{eventId}/enrichments/{type}",
+      "calledPath": "event/67599823/enrichments/h2h_events",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 25222,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 25222,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "events",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "events",
+        "listCount": 10,
+        "pagination": {
+          "page": 1,
+          "limit": 10,
+          "total": 219,
+          "totalPages": 22,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "homeTeam",
+          "awayTeam",
+          "tournament",
+          "season",
+          "roundInfo",
+          "status",
+          "statusType",
+          "startTimestamp",
+          "endTimestamp",
+          "sourceUpdatedAt",
+          "format",
+          "homeScore",
+          "awayScore",
+          "winnerCode",
+          "venue",
+          "time",
+          "hasGlobalHighlights",
+          "finalResultOnly",
+          "toss",
+          "officials",
+          "aggregatedWinnerCode",
+          "changes",
+          "crowdsourcingDataDisplayEnabled",
+          "crowdsourcingEnabled",
+          "eventFilters",
+          "eventState",
+          "feedLocked",
+          "firstToServe",
+          "groundType"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"events\": [{\"id\": 34503142, \"homeTeam\": {\"id\": 84917477, \"name\": \"New York Yankees\", \"shortName\": null, \"fullName\": null, \"nameCode\": null, \"type\": null, \"gender\": null, \"national\": null, \"disabled\": null, \"userCount\": null, \"sport\": null, \"country\": null, \"teamColors\": null, \"fieldTranslations\": null, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"awayTeam\": {\"id\": 20869353, \"name\": \"Tampa Bay Rays\", \"shortName\": null, \"fullName\": null, \"nameCode\": null, \"type\": null, \"gender\": null, \"national\": null, \"disabled\": null, \"userCount\": null, \"sport\": null, \"country\": null, \"teamColors\": null, \"fieldTranslations\": null, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"tournament\": null, \"season\": {\"id\": 68144200, \"name\": \"\", \"year\": null, \"editor\": null}, \"roundInfo\": null, \"status\": {\"code\": 100, \"type\": \"finished\", \"description\": \"Ended\"}, \"statusType\": \"finished\", \"startTimestamp\": 1790291100, \"endTimestamp\": null, \"sourceUpdatedAt\": null, \"format\": {\"periodCount\": null, \u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/event/{eventId}/h2h",
+      "calledPath": "event/67599823/h2h",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 36,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 36,
+        "responseKind": "object (teamDuel, managerDuel)",
+        "topLevelKeys": [
+          "teamDuel",
+          "managerDuel"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"teamDuel\": null, \"managerDuel\": null}"
+    },
+    {
+      "routeTemplate": "/v1/baseball/event/{eventId}/lineups",
+      "calledPath": "event/67599823/lineups",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 9069,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 9069,
+        "responseKind": "home/away split (lineups or similar)",
+        "topLevelKeys": [
+          "home",
+          "away"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": [],
+        "sideKeys": {
+          "home": [
+            "teamId",
+            "formation",
+            "confirmed",
+            "manager",
+            "startersListed",
+            "expectedStarters",
+            "sourceConsistent",
+            "dressedPlayers",
+            "players"
+          ],
+          "away": [
+            "teamId",
+            "formation",
+            "confirmed",
+            "manager",
+            "startersListed",
+            "expectedStarters",
+            "sourceConsistent",
+            "dressedPlayers",
+            "players"
+          ]
+        }
+      },
+      "bodyPreview": "{\"home\": {\"teamId\": 84917477, \"formation\": null, \"confirmed\": true, \"manager\": null, \"startersListed\": 11, \"expectedStarters\": null, \"sourceConsistent\": null, \"dressedPlayers\": 16, \"players\": [{\"player\": {\"id\": 39625815, \"name\": \"Anthony Volpe\"}, \"shirtNumber\": null, \"position\": \"IF\", \"positionLabel\": \"Infielder\", \"substitute\": false, \"battingOrder\": 7, \"appearanceSequence\": 3, \"appearanceRoles\": [\"2B\", \"3B\"], \"startingPitcher\": false, \"statistics\": {\"rating\": null, \"minutesPlayed\": null}}, {\"player\": {\"id\": 93398632, \"name\": \"Spencer Jones\"}, \"shirtNumber\": null, \"position\": \"OF\", \"positionLabel\": \"Outfielder\", \"substitute\": false, \"battingOrder\": 8, \"appearanceSequence\": 2, \"appearanceRoles\": [\"RF\"], \"startingPitcher\": false, \"statistics\": {\"rating\": null, \"minutesPlayed\": null}}, {\"player\": {\"id\": 40412436, \"name\": \"Jos\\u00e9 Caballero\"}, \"shirtNumber\": null, \"position\": \"IF\", \"positionLabel\": \"Infielder\", \"substitute\": false, \"battingOrder\": 9, \"appearanceSequence\": 1, \"appearanceRoles\": [\"3B\"], \"startingPitcher\": false, \"statistics\": {\"rating\": null, \"minutesPlayed\": null}}, {\"player\": {\"id\": 44486704, \"name\": \"Jazz Chisholm Jr.\"}, \"shirtNumber\": null, \"position\": \"IF\", \"posit\u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/event/{eventId}/player-statistics",
+      "calledPath": "event/67599823/player-statistics",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 32244,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 32244,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "playerStatistics",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore",
+          "coverage"
+        ],
+        "listKey": "playerStatistics",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 32,
+          "totalPages": 7,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "team",
+          "player",
+          "position",
+          "statistics"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"playerStatistics\": [{\"team\": {\"id\": 84917477, \"name\": \"New York Yankees\", \"shortName\": \"Yankees\", \"fullName\": null, \"nameCode\": \"NYY\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 73826, \"sport\": {\"name\": \"Baseball\"}, \"country\": null, \"teamColors\": {\"primary\": \"#000066\", \"secondary\": \"#000066\", \"text\": \"#000066\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0646\\u064a\\u0648\\u064a\\u0648\\u0631\\u0643 \\u064a\\u0627\\u0646\\u0643\\u064a\\u0632\", \"ru\": \"\\u041d\\u044c\\u044e-\\u0419\\u043e\\u0440\\u043a \\u042f\\u043d\\u043a\\u0438\\u0437\"}, \"shortNameTranslation\": {\"ar\": \"\\u064a\\u0627\\u0646\\u0643\\u064a\\u0632\", \"bn\": \"\\u0987\\u09af\\u09bc\\u09be\\u0999\\u09cd\\u0995\\u09bf\\u09b8\", \"hi\": \"\\u092f\\u093e\\u0902\\u0915\\u0940\\u091c\", \"ru\": \"\\u042f\\u043d\\u043a\\u0438\\u0437\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"player\": {\"id\": 40513231, \"name\": \"Paul Blackburn\", \"firstName\": \"Paul\", \"lastName\": \"Blackburn\", \"shortName\": \"P. Blackburn\", \"position\": \"RP\", \"gender\": \"M\", \"height\": 185, \"jerseyNumber\": \"58\", \"userCount\": 33, \"dateOfBirthTimestamp\": 754963200, \"market\u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/event/{eventId}/player/{playerId}/statistics",
+      "calledPath": "event/67599823/player/39625815/statistics",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 3642,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 3642,
+        "responseKind": "player object",
+        "topLevelKeys": [
+          "team",
+          "player",
+          "position",
+          "statistics"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": [
+          "id",
+          "name",
+          "firstName",
+          "lastName",
+          "shortName",
+          "position",
+          "gender",
+          "height",
+          "jerseyNumber",
+          "userCount",
+          "dateOfBirthTimestamp",
+          "marketValueCurrency",
+          "proposedMarketValueRaw",
+          "fieldTranslations",
+          "team"
+        ],
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"team\": {\"id\": 84917477, \"name\": \"New York Yankees\", \"shortName\": \"Yankees\", \"fullName\": null, \"nameCode\": \"NYY\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 73826, \"sport\": {\"name\": \"Baseball\"}, \"country\": null, \"teamColors\": {\"primary\": \"#000066\", \"secondary\": \"#000066\", \"text\": \"#000066\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0646\\u064a\\u0648\\u064a\\u0648\\u0631\\u0643 \\u064a\\u0627\\u0646\\u0643\\u064a\\u0632\", \"ru\": \"\\u041d\\u044c\\u044e-\\u0419\\u043e\\u0440\\u043a \\u042f\\u043d\\u043a\\u0438\\u0437\"}, \"shortNameTranslation\": {\"ar\": \"\\u064a\\u0627\\u0646\\u0643\\u064a\\u0632\", \"bn\": \"\\u0987\\u09af\\u09bc\\u09be\\u0999\\u09cd\\u0995\\u09bf\\u09b8\", \"hi\": \"\\u092f\\u093e\\u0902\\u0915\\u0940\\u091c\", \"ru\": \"\\u042f\\u043d\\u043a\\u0438\\u0437\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"player\": {\"id\": 39625815, \"name\": \"Anthony Volpe\", \"firstName\": \"Anthony\", \"lastName\": \"Volpe\", \"shortName\": \"A. Volpe\", \"position\": \"SS\", \"gender\": \"M\", \"height\": 178, \"jerseyNumber\": \"11\", \"userCount\": 122, \"dateOfBirthTimestamp\": 988416000, \"marketValueCurrency\": \"EUR\", \"pro\u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/event/{eventId}/pregame-form",
+      "calledPath": "event/67599823/pregame-form",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 463,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 463,
+        "responseKind": "pregame form envelope",
+        "topLevelKeys": [
+          "homeTeam",
+          "awayTeam"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"homeTeam\": {\"teamId\": 84917477, \"form\": [\"L\", \"L\", \"W\", \"W\", \"W\"], \"source\": \"derived\", \"sampleSize\": 5, \"order\": \"mostRecentFirst\", \"scope\": \"last completed matches across competitions\", \"eventIds\": [53584902, 86018852, 46380049, 83064342, 51333361]}, \"awayTeam\": {\"teamId\": 20869353, \"form\": [\"W\", \"W\", \"L\", \"W\", \"W\"], \"source\": \"derived\", \"sampleSize\": 5, \"order\": \"mostRecentFirst\", \"scope\": \"last completed matches across competitions\", \"eventIds\": [53584902, 86018852, 18590443, 71467148, 21484764]}}"
+    },
+    {
+      "routeTemplate": "/v1/baseball/event/{eventId}/statistics",
+      "calledPath": "event/67599823/statistics",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 4716,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 4716,
+        "responseKind": "list envelope",
+        "topLevelKeys": [
+          "statistics",
+          "inconsistencies"
+        ],
+        "listKey": "statistics",
+        "listCount": 1,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "period",
+          "groups"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"statistics\": [{\"period\": \"ALL\", \"groups\": [{\"groupName\": \"Fielding\", \"statisticsItems\": [{\"name\": \"Assists\", \"key\": \"fieldingAssists\", \"home\": \"9\", \"away\": \"7\", \"homeValue\": 9, \"awayValue\": 7, \"homeTotal\": null, \"awayTotal\": null, \"homePercentage\": null, \"awayPercentage\": null}, {\"name\": \"Put outs\", \"key\": \"fieldingPutOuts\", \"home\": \"27\", \"away\": \"27\", \"homeValue\": 27, \"awayValue\": 27, \"homeTotal\": null, \"awayTotal\": null, \"homePercentage\": null, \"awayPercentage\": null}]}, {\"groupName\": \"Batting\", \"statisticsItems\": [{\"name\": \"At bats\", \"key\": \"battingAtBats\", \"home\": \"34\", \"away\": \"32\", \"homeValue\": 34, \"awayValue\": 32, \"homeTotal\": null, \"awayTotal\": null, \"homePercentage\": null, \"awayPercentage\": null}, {\"name\": \"AVG\", \"key\": \"battingAvg\", \"home\": \".206\", \"away\": \".219\", \"homeValue\": 0.206, \"awayValue\": 0.219, \"homeTotal\": null, \"awayTotal\": null, \"homePercentage\": null, \"awayPercentage\": null}, {\"name\": \"Base on balls\", \"key\": \"battingBaseOnBalls\", \"home\": \"3\", \"away\": \"0\", \"homeValue\": 3, \"awayValue\": 0, \"homeTotal\": null, \"awayTotal\": null, \"homePercentage\": null, \"awayPercentage\": null}, {\"name\": \"Doubles\", \"key\": \"battingDoubles\", \"home\": \"2\", \"away\": \"0\", \"homeValue\": 2,\u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/event/{eventId}/team-streaks",
+      "calledPath": "event/67599823/team-streaks",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 111,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 111,
+        "responseKind": "object (general, generalPerLastX, generalTotal, head2head, head2HeadPerLastX, head2HeadTotal)",
+        "topLevelKeys": [
+          "general",
+          "generalPerLastX",
+          "generalTotal",
+          "head2head",
+          "head2HeadPerLastX",
+          "head2HeadTotal"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"general\": [], \"generalPerLastX\": [], \"generalTotal\": [], \"head2head\": [], \"head2HeadPerLastX\": [], \"head2HeadTotal\": []}"
+    },
+    {
+      "routeTemplate": "/v1/baseball/event/{eventId}/top-performers",
+      "calledPath": "event/67599823/top-performers",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 541,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 541,
+        "responseKind": "list envelope",
+        "topLevelKeys": [
+          "topPerformers"
+        ],
+        "listKey": "topPerformers",
+        "listCount": 3,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "role",
+          "player",
+          "teamId",
+          "rating",
+          "statistics"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"topPerformers\": [{\"role\": \"batter\", \"player\": {\"id\": 53862519, \"name\": \"Victor Mesa Jr.\"}, \"teamId\": 20869353, \"rating\": 0.233, \"statistics\": {\"battingRbi\": 2, \"battingHits\": 1, \"battingAtBats\": 4, \"battingHomeRuns\": 1}}, {\"role\": \"batter\", \"player\": {\"id\": 68066407, \"name\": \"Ryan Vilade\"}, \"teamId\": 20869353, \"rating\": 0.233, \"statistics\": {\"battingHits\": 1, \"battingAtBats\": 2, \"battingHomeRuns\": 1}}, {\"role\": \"batter\", \"player\": {\"id\": 93398632, \"name\": \"Spencer Jones\"}, \"teamId\": 84917477, \"rating\": 0.163, \"statistics\": {\"battingHits\": 1, \"battingAtBats\": 2, \"battingBaseOnBalls\": 2}}]}"
+    },
+    {
+      "routeTemplate": "/v1/baseball/event/{eventId}/umpires",
+      "calledPath": "event/67599823/umpires",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 685,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 685,
+        "responseKind": "list envelope",
+        "topLevelKeys": [
+          "umpires"
+        ],
+        "listKey": "umpires",
+        "listCount": 6,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "umpire",
+          "assignment"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"umpires\": [{\"umpire\": {\"firstName\": \"Ben\", \"lastName\": \"May\", \"fullName\": \"Ben May\", \"experience\": 3}, \"assignment\": \"1B\"}, {\"umpire\": {\"firstName\": \"D.J.\", \"lastName\": \"Reyburn\", \"fullName\": \"D.J. Reyburn\", \"experience\": 11}, \"assignment\": \"2B\"}, {\"umpire\": {\"firstName\": \"Ryan\", \"lastName\": \"Wills\", \"fullName\": \"Ryan Wills\", \"experience\": 1}, \"assignment\": \"3B\"}, {\"umpire\": {\"firstName\": \"Dan\", \"lastName\": \"Bellino\", \"fullName\": \"Dan Bellino\", \"experience\": 13}, \"assignment\": \"HP\"}, {\"umpire\": {\"firstName\": \"Shane\", \"lastName\": \"Livensparger\", \"fullName\": \"Shane Livensparger\", \"experience\": 2}, \"assignment\": \"LF\"}, {\"umpire\": {\"firstName\": \"Jeremie\", \"lastName\": \"Rehak\", \"fullName\": \"Jeremie Rehak\", \"experience\": 4}, \"assignment\": \"RF\"}]}"
+    },
+    {
+      "routeTemplate": "/v1/baseball/event/{eventId}/weather",
+      "calledPath": "event/67599823/weather",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 437,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 437,
+        "responseKind": "list envelope",
+        "topLevelKeys": [
+          "conditions"
+        ],
+        "listKey": "conditions",
+        "listCount": 2,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "temperature",
+          "generalCondition",
+          "condition",
+          "humidity",
+          "dewPoint",
+          "cloudCover",
+          "windSpeed",
+          "windDirection",
+          "isForecast",
+          "obsTime"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"conditions\": [{\"temperature\": 16.67, \"generalCondition\": \"clear\", \"condition\": \"Clear \", \"humidity\": 64, \"dewPoint\": 8.89, \"cloudCover\": 0, \"windSpeed\": 19.31, \"windDirection\": \"SSW\", \"isForecast\": true, \"obsTime\": \"2026-10-08T02:17:34.000Z\"}, {\"temperature\": 16.67, \"generalCondition\": \"clear\", \"condition\": \"Clear \", \"humidity\": 64, \"dewPoint\": 8.89, \"cloudCover\": 0, \"windSpeed\": 19.31, \"windDirection\": \"SSW\", \"isForecast\": false, \"obsTime\": \"2026-10-08T03:03:07.000Z\"}]}"
+    },
+    {
+      "routeTemplate": "/v1/baseball/events",
+      "calledPath": "events",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 1570,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 1570,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "items",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "items",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 18,
+          "totalPages": 4,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "tournamentId",
+          "homeTeam",
+          "awayTeam",
+          "startTimestamp",
+          "status",
+          "homeScore",
+          "awayScore",
+          "seasonId",
+          "competitionName"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"items\": [{\"id\": 28606880, \"tournamentId\": 53168725, \"homeTeam\": {\"id\": 20869353, \"name\": \"Tampa Bay Rays\"}, \"awayTeam\": {\"id\": 27821810, \"name\": \"Cleveland Guardians\"}, \"startTimestamp\": 1792540800, \"status\": \"notstarted\", \"homeScore\": {\"series\": 4}, \"awayScore\": {\"series\": 2}, \"seasonId\": 68144200, \"competitionName\": \"MLB Postseason\"}, {\"id\": 87281762, \"tournamentId\": 10539817, \"homeTeam\": {\"id\": 81082866, \"name\": \"Chinatrust Brothers\"}, \"awayTeam\": {\"id\": 18596902, \"name\": \"Wei Chuan Dragons\"}, \"startTimestamp\": 1792578900, \"status\": \"notstarted\", \"homeScore\": {\"series\": 0}, \"awayScore\": {\"series\": 3}, \"seasonId\": 59335459, \"competitionName\": \"CPBL, Playoffs\"}, {\"id\": 74654676, \"tournamentId\": 67266355, \"homeTeam\": {\"id\": 69804242, \"name\": \"Pineros de Isla de La Juventud\"}, \"awayTeam\": {\"id\": 45404973, \"name\": \"Cazadores de Artemisa\"}, \"startTimestamp\": 1792591200, \"status\": \"notstarted\", \"homeScore\": {}, \"awayScore\": {}, \"seasonId\": 46347278, \"competitionName\": \"Serie Nacional\"}, {\"id\": 54923261, \"tournamentId\": 67266355, \"homeTeam\": {\"id\": 55843574, \"name\": \"Vegueros de Pinar Del Rio\"}, \"awayTeam\": {\"id\": 61158097, \"name\": \"Leones de Industriales\"}, \"startTimestamp\": 17925912\u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/fixtures/today",
+      "calledPath": "fixtures/today",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 1570,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 1570,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "items",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "items",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 18,
+          "totalPages": 4,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "tournamentId",
+          "homeTeam",
+          "awayTeam",
+          "startTimestamp",
+          "status",
+          "homeScore",
+          "awayScore",
+          "seasonId",
+          "competitionName"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"items\": [{\"id\": 28606880, \"tournamentId\": 53168725, \"homeTeam\": {\"id\": 20869353, \"name\": \"Tampa Bay Rays\"}, \"awayTeam\": {\"id\": 27821810, \"name\": \"Cleveland Guardians\"}, \"startTimestamp\": 1792540800, \"status\": \"notstarted\", \"homeScore\": {\"series\": 4}, \"awayScore\": {\"series\": 2}, \"seasonId\": 68144200, \"competitionName\": \"MLB Postseason\"}, {\"id\": 87281762, \"tournamentId\": 10539817, \"homeTeam\": {\"id\": 81082866, \"name\": \"Chinatrust Brothers\"}, \"awayTeam\": {\"id\": 18596902, \"name\": \"Wei Chuan Dragons\"}, \"startTimestamp\": 1792578900, \"status\": \"notstarted\", \"homeScore\": {\"series\": 0}, \"awayScore\": {\"series\": 3}, \"seasonId\": 59335459, \"competitionName\": \"CPBL, Playoffs\"}, {\"id\": 74654676, \"tournamentId\": 67266355, \"homeTeam\": {\"id\": 69804242, \"name\": \"Pineros de Isla de La Juventud\"}, \"awayTeam\": {\"id\": 45404973, \"name\": \"Cazadores de Artemisa\"}, \"startTimestamp\": 1792591200, \"status\": \"notstarted\", \"homeScore\": {}, \"awayScore\": {}, \"seasonId\": 46347278, \"competitionName\": \"Serie Nacional\"}, {\"id\": 54923261, \"tournamentId\": 67266355, \"homeTeam\": {\"id\": 55843574, \"name\": \"Vegueros de Pinar Del Rio\"}, \"awayTeam\": {\"id\": 61158097, \"name\": \"Leones de Industriales\"}, \"startTimestamp\": 17925912\u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/manager/{managerId}",
+      "calledPath": "manager/62643844",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 132,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 132,
+        "responseKind": "manager object",
+        "topLevelKeys": [
+          "manager"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": [
+          "id",
+          "name",
+          "imageUrl"
+        ],
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"manager\": {\"id\": 62643844, \"name\": \"Kevin Cash\", \"imageUrl\": \"https://sports-api.sportsdata365.com/msdata/v1/images/managers/62643844\"}}"
+    },
+    {
+      "routeTemplate": "/v1/baseball/player/{playerId}",
+      "calledPath": "player/71698966",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 624,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 624,
+        "responseKind": "player object",
+        "topLevelKeys": [
+          "player"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": [
+          "id",
+          "name",
+          "firstName",
+          "lastName",
+          "shortName",
+          "position",
+          "gender",
+          "height",
+          "jerseyNumber",
+          "userCount",
+          "dateOfBirthTimestamp",
+          "marketValueCurrency",
+          "proposedMarketValueRaw",
+          "fieldTranslations",
+          "team"
+        ],
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"player\": {\"id\": 71698966, \"name\": \"Shohei Ohtani\", \"firstName\": \"Shohei\", \"lastName\": \"Ohtani\", \"shortName\": \"S. Ohtani\", \"position\": \"DH\", \"gender\": \"M\", \"height\": 193, \"jerseyNumber\": \"17\", \"userCount\": 11487, \"dateOfBirthTimestamp\": 773366400, \"marketValueCurrency\": \"EUR\", \"proposedMarketValueRaw\": null, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0634\\u0648\\u0647\\u064a \\u0623\\u0648\\u062a\\u0627\\u0646\\u064a\", \"bn\": \"\\u09b6\\u09cb\\u09b9\\u09c7\\u0987 \\u0993\\u09b9\\u09a4\\u09be\\u09a8\\u09bf\", \"hi\": \"\\u0936\\u094b\\u0939\\u0947\\u0908 \\u0913\\u0939\\u0924\\u093e\\u0928\\u0940\", \"ru\": \"\\u0421\\u0451\\u0445\\u044d\\u0439 \\u041e\\u0445\\u0442\\u0430\\u043d\\u0438\"}, \"shortNameTranslation\": {\"ar\": \"\\u0634. \\u0623\\u0648\\u062a\\u0627\\u0646\\u064a\", \"bn\": \"\\u098f\\u09b8. \\u0993\\u09b9\\u09a4\\u09be\\u09a8\\u09bf\", \"hi\": \"\\u090f\\u0938. \\u0913\\u0939\\u0924\\u093e\\u0928\\u0940\", \"ru\": \"\\u0421. \\u041e\\u0445\\u0442\\u0430\\u043d\\u0438\"}}, \"team\": null}}"
+    },
+    {
+      "routeTemplate": "/v1/baseball/player/{playerId}/events/{direction}",
+      "calledPath": "player/71698966/events/last",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 25291,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 25291,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "events",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "events",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 1253,
+          "totalPages": 251,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "homeTeam",
+          "awayTeam",
+          "tournament",
+          "season",
+          "roundInfo",
+          "status",
+          "statusType",
+          "startTimestamp",
+          "endTimestamp",
+          "sourceUpdatedAt",
+          "homeScore",
+          "awayScore",
+          "format",
+          "winnerCode",
+          "venue",
+          "time",
+          "hasGlobalHighlights",
+          "finalResultOnly",
+          "toss",
+          "officials"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"events\": [{\"id\": 86050774, \"homeTeam\": {\"id\": 59038784, \"name\": \"Los Angeles Dodgers\", \"shortName\": \"Dodgers\", \"fullName\": null, \"nameCode\": \"LAD\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 68746, \"sport\": {\"name\": \"Baseball\"}, \"country\": {\"name\": \"USA\", \"alpha2\": \"US\", \"alpha3\": \"USA\"}, \"teamColors\": {\"primary\": \"#014785\", \"secondary\": \"#014785\", \"text\": \"#014785\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0644\\u0648\\u0633 \\u0623\\u0646\\u062c\\u0644\\u0648\\u0633 \\u062f\\u0648\\u062f\\u062c\\u0631\\u0632\", \"ru\": \"\\u041b\\u043e\\u0441-\\u0410\\u043d\\u0434\\u0436\\u0435\\u043b\\u0435\\u0441 \\u0414\\u043e\\u0434\\u0436\\u0435\\u0440\\u0441\"}, \"shortNameTranslation\": {\"ar\": \"\\u062f\\u0648\\u062f\\u062c\\u0631\\u0632\", \"bn\": \"\\u09a1\\u099c\\u09be\\u09b0\\u09cd\\u09b8\", \"hi\": \"\\u0921\\u0949\\u091c\\u0930\\u094d\\u0938\", \"ru\": \"\\u0414\\u043e\\u0434\\u0436\\u0435\\u0440\\u0441\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"awayTeam\": {\"id\": 85714484, \"name\": \"Milwaukee Brewers\", \"shortName\": \"Brewers\", \"fullName\": null, \"nameCode\": \"MIL\", \"type\": 0, \"gender\": \"M\", \"national\": \u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/players",
+      "calledPath": "players",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 467,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 467,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "items",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "items",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 9758,
+          "totalPages": 1952,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "name",
+          "countryAlpha2",
+          "position"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"items\": [{\"id\": 71698966, \"name\": \"Shohei Ohtani\", \"countryAlpha2\": \"JP\", \"position\": \"DH\"}, {\"id\": 98512614, \"name\": \"Yoshinobu Yamamoto\", \"countryAlpha2\": \"JP\", \"position\": \"SP\"}, {\"id\": 17872256, \"name\": \"Aaron Judge\", \"countryAlpha2\": \"US\", \"position\": \"RF\"}, {\"id\": 43894678, \"name\": \"Ronald Acu\\u00f1a Jr.\", \"countryAlpha2\": \"VE\", \"position\": \"RF\"}, {\"id\": 48416764, \"name\": \"Jacob Misiorowski\", \"countryAlpha2\": \"US\", \"position\": \"SP\"}], \"page\": 1, \"limit\": 5, \"total\": 9758, \"totalPages\": 1952, \"hasMore\": true}"
+    },
+    {
+      "routeTemplate": "/v1/baseball/search",
+      "calledPath": "search",
+      "query": {
+        "page": 1,
+        "limit": 5,
+        "q": "Yankees"
+      },
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 161,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 161,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "items",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "items",
+        "listCount": 1,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 1,
+          "totalPages": 1,
+          "hasMore": false
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "type",
+          "id",
+          "name",
+          "countryAlpha2",
+          "gender"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"items\": [{\"type\": \"team\", \"id\": 84917477, \"name\": \"New York Yankees\", \"countryAlpha2\": null, \"gender\": \"M\"}], \"page\": 1, \"limit\": 5, \"total\": 1, \"totalPages\": 1, \"hasMore\": false}"
+    },
+    {
+      "routeTemplate": "/v1/baseball/team/{teamId}",
+      "calledPath": "team/84917477",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 736,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 736,
+        "responseKind": "team object",
+        "topLevelKeys": [
+          "team"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": [
+          "id",
+          "name",
+          "shortName",
+          "fullName",
+          "nameCode",
+          "type",
+          "gender",
+          "national",
+          "disabled",
+          "userCount",
+          "sport",
+          "country",
+          "teamColors",
+          "fieldTranslations",
+          "venue",
+          "category",
+          "tournament",
+          "primaryUniqueTournament",
+          "foundationDateTimestamp",
+          "logoUrl",
+          "manager"
+        ],
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"team\": {\"id\": 84917477, \"name\": \"New York Yankees\", \"shortName\": \"Yankees\", \"fullName\": null, \"nameCode\": \"NYY\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 71481, \"sport\": {\"name\": \"Baseball\"}, \"country\": null, \"teamColors\": {\"primary\": \"#000066\", \"secondary\": \"#000066\", \"text\": \"#000066\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0646\\u064a\\u0648\\u064a\\u0648\\u0631\\u0643 \\u064a\\u0627\\u0646\\u0643\\u064a\\u0632\", \"ru\": \"\\u041d\\u044c\\u044e-\\u0419\\u043e\\u0440\\u043a \\u042f\\u043d\\u043a\\u0438\\u0437\"}, \"shortNameTranslation\": {\"ar\": \"\\u064a\\u0627\\u0646\\u0643\\u064a\\u0632\", \"bn\": \"\\u0987\\u09af\\u09bc\\u09be\\u0999\\u09cd\\u0995\\u09bf\\u09b8\", \"hi\": \"\\u092f\\u093e\\u0902\\u0915\\u0940\\u091c\", \"ru\": \"\\u042f\\u043d\\u043a\\u0438\\u0437\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": \"https://sports-api.sportsdata365.com/msdata/v1/images/teams/84917477\", \"manager\": null}}"
+    },
+    {
+      "routeTemplate": "/v1/baseball/team/{teamId}/enrichments",
+      "calledPath": "team/84917477/enrichments",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 1084,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 1084,
+        "responseKind": "list envelope",
+        "topLevelKeys": [
+          "types"
+        ],
+        "listKey": "types",
+        "listCount": 8,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "type",
+          "useCase"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"types\": [{\"type\": \"events_last\", \"useCase\": \"Recent finished matches in our event-list envelope. Prefer GET .../team/:id/events/last for the same data from the events table.\"}, {\"type\": \"events_next\", \"useCase\": \"Upcoming matches in our event-list envelope. Prefer GET .../team/:id/events/next for the same data from the events table.\"}, {\"type\": \"featured_event\", \"useCase\": \"Highlighted featured match. Dedicated route: GET .../team/:id/featured-event.\"}, {\"type\": \"media\", \"useCase\": \"Team media / image gallery. Dedicated route: GET .../team/:id/media.\"}, {\"type\": \"near_events\", \"useCase\": \"Immediate previous and next match. Dedicated route: GET .../team/:id/near-events.\"}, {\"type\": \"performance\", \"useCase\": \"Recent form with per-match performance points. Dedicated route: GET .../team/:id/performance.\"}, {\"type\": \"standings_seasons\", \"useCase\": \"Tournaments and seasons this team has standings in. Dedicated route: GET .../team/:id/standings-seasons.\"}, {\"type\": \"unique_tournaments_all\", \"useCase\": \"Unique tournaments this team has appeared in. Dedicated route: GET .../team/:id/unique-tournaments.\"}]}"
+    },
+    {
+      "routeTemplate": "/v1/baseball/team/{teamId}/enrichments/{type}",
+      "calledPath": "team/84917477/enrichments/events_last",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 50291,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 50291,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "events",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "events",
+        "listCount": 10,
+        "pagination": {
+          "page": 1,
+          "limit": 10,
+          "total": 30,
+          "totalPages": 3,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "homeTeam",
+          "awayTeam",
+          "tournament",
+          "season",
+          "roundInfo",
+          "status",
+          "statusType",
+          "startTimestamp",
+          "endTimestamp",
+          "sourceUpdatedAt",
+          "format",
+          "homeScore",
+          "awayScore",
+          "winnerCode",
+          "venue",
+          "time",
+          "hasGlobalHighlights",
+          "finalResultOnly",
+          "toss",
+          "officials",
+          "aggregatedWinnerCode",
+          "changes",
+          "crowdsourcingDataDisplayEnabled",
+          "crowdsourcingEnabled",
+          "eventFilters",
+          "eventState",
+          "feedLocked",
+          "firstToServe",
+          "groundType"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"events\": [{\"id\": 32662815, \"homeTeam\": {\"id\": 94231679, \"name\": \"Los Angeles Angels\", \"shortName\": \"Angels\", \"fullName\": null, \"nameCode\": \"LAA\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": null, \"userCount\": 19375, \"sport\": {\"name\": \"Baseball\"}, \"country\": {\"name\": \"USA\", \"alpha2\": \"US\", \"alpha3\": \"USA\"}, \"teamColors\": {\"primary\": \"#aa0114\", \"secondary\": \"#aa0114\", \"text\": \"#aa0114\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0644\\u0648\\u0633 \\u0623\\u0646\\u062c\\u0644\\u0648\\u0633 \\u0623\\u0646\\u062c\\u0644\\u0632\", \"ru\": \"\\u041b\\u043e\\u0441-\\u0410\\u043d\\u0434\\u0436\\u0435\\u043b\\u0435\\u0441 \\u042d\\u043d\\u0434\\u0436\\u0435\\u043b\\u0441\"}, \"shortNameTranslation\": {\"ar\": \"\\u0623\\u0646\\u062c\\u0644\\u0632\", \"bn\": \"\\u098f\\u099e\\u09cd\\u099c\\u09c7\\u09b2\\u09b8\", \"hi\": \"\\u090f\\u0902\\u091c\\u0932\\u094d\\u0938\", \"ru\": \"\\u042d\\u043d\\u0434\\u0436\\u0435\\u043b\\u0441\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"awayTeam\": {\"id\": 84917477, \"name\": \"New York Yankees\", \"shortName\": \"Yankees\", \"fullName\": null, \"nameCode\": \"NYY\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"di\u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/team/{teamId}/events/{direction}",
+      "calledPath": "team/84917477/events/last",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 23784,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 23784,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "events",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "events",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 2123,
+          "totalPages": 425,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "homeTeam",
+          "awayTeam",
+          "tournament",
+          "season",
+          "roundInfo",
+          "status",
+          "statusType",
+          "startTimestamp",
+          "endTimestamp",
+          "sourceUpdatedAt",
+          "homeScore",
+          "awayScore",
+          "format",
+          "winnerCode",
+          "venue",
+          "time",
+          "hasGlobalHighlights",
+          "finalResultOnly",
+          "toss",
+          "officials"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"events\": [{\"id\": 82011329, \"homeTeam\": {\"id\": 20869353, \"name\": \"Tampa Bay Rays\", \"shortName\": \"Rays\", \"fullName\": null, \"nameCode\": \"TB\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 36840, \"sport\": {\"name\": \"Baseball\"}, \"country\": {\"name\": \"USA\", \"alpha2\": \"US\", \"alpha3\": \"USA\"}, \"teamColors\": {\"primary\": \"#000066\", \"secondary\": \"#000066\", \"text\": \"#000066\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u062a\\u0627\\u0645\\u0628\\u0627 \\u0628\\u0627\\u064a \\u0631\\u0627\\u064a\\u0632\", \"ru\": \"\\u0422\\u0430\\u043c\\u043f\\u0430-\\u0411\\u044d\\u0439 \\u0420\\u0435\\u0439\\u0441\"}, \"shortNameTranslation\": {\"ar\": \"\\u0631\\u0627\\u064a\\u0632\", \"bn\": \"\\u09b0\\u09c7\", \"hi\": \"\\u0930\\u0947\\u091c\", \"ru\": \"\\u0420\\u0435\\u0439\\u0441\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"awayTeam\": {\"id\": 84917477, \"name\": \"New York Yankees\", \"shortName\": \"Yankees\", \"fullName\": null, \"nameCode\": \"NYY\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 72705, \"sport\": {\"name\": \"Baseball\"}, \"country\": {\"name\": \"USA\", \"alpha2\": \"US\", \"alpha3\": \"USA\"}\u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/team/{teamId}/featured-event",
+      "calledPath": "team/84917477/featured-event",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 4983,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 4983,
+        "responseKind": "match object",
+        "topLevelKeys": [
+          "event"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": [
+          "id",
+          "homeTeam",
+          "awayTeam",
+          "tournament",
+          "season",
+          "roundInfo",
+          "status",
+          "statusType",
+          "startTimestamp",
+          "endTimestamp",
+          "sourceUpdatedAt",
+          "format",
+          "homeScore",
+          "awayScore",
+          "winnerCode",
+          "venue",
+          "time",
+          "hasGlobalHighlights",
+          "finalResultOnly",
+          "toss",
+          "officials",
+          "aggregatedWinnerCode",
+          "changes",
+          "crowdsourcingDataDisplayEnabled",
+          "crowdsourcingEnabled",
+          "eventFilters",
+          "eventState",
+          "feedLocked",
+          "firstToServe",
+          "groundType",
+          "hasEventPlayerHeatMap",
+          "hasEventPlayerStatistics",
+          "isAwarded",
+          "isEditor",
+          "periods"
+        ],
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"event\": {\"id\": 67599823, \"homeTeam\": {\"id\": 84917477, \"name\": \"New York Yankees\", \"shortName\": \"Yankees\", \"fullName\": null, \"nameCode\": \"NYY\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 71809, \"sport\": {\"name\": \"Baseball\"}, \"country\": null, \"teamColors\": {\"primary\": \"#000066\", \"secondary\": \"#000066\", \"text\": \"#000066\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0646\\u064a\\u0648\\u064a\\u0648\\u0631\\u0643 \\u064a\\u0627\\u0646\\u0643\\u064a\\u0632\", \"ru\": \"\\u041d\\u044c\\u044e-\\u0419\\u043e\\u0440\\u043a \\u042f\\u043d\\u043a\\u0438\\u0437\"}, \"shortNameTranslation\": {\"ar\": \"\\u064a\\u0627\\u0646\\u0643\\u064a\\u0632\", \"bn\": \"\\u0987\\u09af\\u09bc\\u09be\\u0999\\u09cd\\u0995\\u09bf\\u09b8\", \"hi\": \"\\u092f\\u093e\\u0902\\u0915\\u0940\\u091c\", \"ru\": \"\\u042f\\u043d\\u043a\\u0438\\u0437\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"awayTeam\": {\"id\": 20869353, \"name\": \"Tampa Bay Rays\", \"shortName\": \"Rays\", \"fullName\": null, \"nameCode\": \"TB\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 35658, \"sport\": {\"name\": \"Baseball\"}, \"country\": null, \"team\u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/team/{teamId}/media",
+      "calledPath": "team/84917477/media",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 1877,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 1877,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "media",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "media",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 10,
+          "totalPages": 2,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "title",
+          "subtitle",
+          "url",
+          "sourceUrl",
+          "thumbnailUrl",
+          "mediaType",
+          "doFollow",
+          "livestream",
+          "keyHighlight",
+          "createdAtTimestamp",
+          "forCountries"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"media\": [{\"title\": \"Yankees 3 - 4 Rays\", \"subtitle\": \"Full Highlights\", \"url\": \"https://www.youtube.com/watch?v=fqIDeNUWL2U&pp=0gcJCTUMAYcqIYzv\", \"sourceUrl\": \"https://www.youtube.com/watch?v=fqIDeNUWL2U&pp=0gcJCTUMAYcqIYzv\", \"thumbnailUrl\": \"https://i.ytimg.com/vi/fqIDeNUWL2U/hqdefault.jpg\", \"mediaType\": 6, \"doFollow\": false, \"livestream\": false, \"keyHighlight\": true, \"createdAtTimestamp\": 1791433231, \"forCountries\": null}, {\"title\": \"Rays 5 - 2 Yankees\", \"subtitle\": \"Full Highlights\", \"url\": \"https://www.youtube.com/watch?v=NM3Rh7tgqE0\", \"sourceUrl\": \"https://www.youtube.com/watch?v=NM3Rh7tgqE0\", \"thumbnailUrl\": \"https://i.ytimg.com/vi/NM3Rh7tgqE0/hqdefault.jpg\", \"mediaType\": 6, \"doFollow\": false, \"livestream\": false, \"keyHighlight\": true, \"createdAtTimestamp\": 1791258773, \"forCountries\": null}, {\"title\": \"Rays 1 - 0 Yankees\", \"subtitle\": \"Full Highlights\", \"url\": \"https://youtu.be/Sp98vsSa3-s\", \"sourceUrl\": \"https://youtu.be/Sp98vsSa3-s\", \"thumbnailUrl\": \"https://i.ytimg.com/vi/Sp98vsSa3-s/hqdefault.jpg\", \"mediaType\": 6, \"doFollow\": false, \"livestream\": false, \"keyHighlight\": true, \"createdAtTimestamp\": 1791077762, \"forCountries\": null}, {\"title\": \"Yankees 9 - 2 Red Sox\", \"sub\u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/team/{teamId}/near-events",
+      "calledPath": "team/84917477/near-events",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 5727,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 5727,
+        "responseKind": "previous/next event envelope",
+        "topLevelKeys": [
+          "previousEvent",
+          "nextEvent",
+          "sourceUpdatedAt"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"previousEvent\": {\"id\": 67599823, \"homeTeam\": {\"id\": 84917477, \"name\": \"New York Yankees\", \"shortName\": \"Yankees\", \"fullName\": null, \"nameCode\": \"NYY\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 73341, \"sport\": {\"name\": \"Baseball\"}, \"country\": {\"name\": \"USA\", \"alpha2\": \"US\", \"alpha3\": \"USA\"}, \"teamColors\": {\"primary\": \"#000066\", \"secondary\": \"#000066\", \"text\": \"#000066\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0646\\u064a\\u0648\\u064a\\u0648\\u0631\\u0643 \\u064a\\u0627\\u0646\\u0643\\u064a\\u0632\", \"ru\": \"\\u041d\\u044c\\u044e-\\u0419\\u043e\\u0440\\u043a \\u042f\\u043d\\u043a\\u0438\\u0437\"}, \"shortNameTranslation\": {\"ar\": \"\\u064a\\u0627\\u0646\\u0643\\u064a\\u0632\", \"bn\": \"\\u0987\\u09af\\u09bc\\u09be\\u0999\\u09cd\\u0995\\u09bf\\u09b8\", \"hi\": \"\\u092f\\u093e\\u0902\\u0915\\u0940\\u091c\", \"ru\": \"\\u042f\\u043d\\u043a\\u0438\\u0437\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"awayTeam\": {\"id\": 20869353, \"name\": \"Tampa Bay Rays\", \"shortName\": \"Rays\", \"fullName\": null, \"nameCode\": \"TB\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 37707, \"\u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/team/{teamId}/performance",
+      "calledPath": "team/84917477/performance",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 34391,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 34391,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "order",
+          "sampleSize",
+          "form",
+          "events",
+          "points",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "events",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 20,
+          "totalPages": 4,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "homeTeam",
+          "awayTeam",
+          "tournament",
+          "season",
+          "roundInfo",
+          "status",
+          "statusType",
+          "startTimestamp",
+          "endTimestamp",
+          "sourceUpdatedAt",
+          "format",
+          "homeScore",
+          "awayScore",
+          "winnerCode",
+          "venue",
+          "time",
+          "hasGlobalHighlights",
+          "finalResultOnly",
+          "toss",
+          "officials",
+          "aggregatedWinnerCode",
+          "changes",
+          "crowdsourcingDataDisplayEnabled",
+          "crowdsourcingEnabled",
+          "eventFilters",
+          "eventState",
+          "feedLocked",
+          "firstToServe",
+          "groundType"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"order\": \"startTimestamp:desc\", \"sampleSize\": 20, \"form\": [{\"eventId\": 67599823, \"venue\": \"home\", \"outcome\": \"L\", \"opponent\": {\"id\": 20869353, \"name\": \"Tampa Bay Rays\", \"shortName\": \"Rays\", \"fullName\": null, \"nameCode\": \"TB\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 37707, \"sport\": {\"name\": \"Baseball\"}, \"country\": {\"name\": \"USA\", \"alpha2\": \"US\", \"alpha3\": \"USA\"}, \"teamColors\": {\"primary\": \"#000066\", \"secondary\": \"#000066\", \"text\": \"#000066\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u062a\\u0627\\u0645\\u0628\\u0627 \\u0628\\u0627\\u064a \\u0631\\u0627\\u064a\\u0632\", \"ru\": \"\\u0422\\u0430\\u043c\\u043f\\u0430-\\u0411\\u044d\\u0439 \\u0420\\u0435\\u0439\\u0441\"}, \"shortNameTranslation\": {\"ar\": \"\\u0631\\u0627\\u064a\\u0632\", \"bn\": \"\\u09b0\\u09c7\", \"hi\": \"\\u0930\\u0947\\u091c\", \"ru\": \"\\u0420\\u0435\\u0439\\u0441\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"scoreFor\": 3, \"scoreAgainst\": 4, \"performanceRating\": -2.44}, {\"eventId\": 53584902, \"venue\": \"away\", \"outcome\": \"L\", \"opponent\": {\"id\": 20869353, \"name\": \"Tampa Bay Rays\", \"shortName\": \"Rays\", \"fullName\": \u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/team/{teamId}/players",
+      "calledPath": "team/84917477/players",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 169606,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 169606,
+        "responseKind": "list envelope",
+        "topLevelKeys": [
+          "players"
+        ],
+        "listKey": "players",
+        "listCount": 48,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "player",
+          "position"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"players\": [{\"player\": {\"id\": 80701490, \"name\": \"Gerrit Cole\", \"firstName\": \"Gerrit\", \"lastName\": \"Cole\", \"shortName\": \"G. Cole\", \"position\": \"SP\", \"gender\": \"M\", \"height\": 193, \"jerseyNumber\": \"45\", \"userCount\": 552, \"dateOfBirthTimestamp\": 652752000, \"marketValueCurrency\": null, \"proposedMarketValueRaw\": null, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0643\\u0648\\u0644\\u060c \\u062c\\u064a\\u0631\\u064a\\u062a\", \"bn\": \"\\u0995\\u09cb\\u09b2, \\u0997\\u09c7\\u09b0\\u09bf\\u099f\", \"hi\": \"\\u0915\\u094b\\u0932, \\u0917\\u0947\\u0930\\u093f\\u091f\", \"ru\": \"\\u0413\\u0435\\u0440\\u0440\\u0438\\u0442 \\u041a\\u043e\\u0443\\u043b\"}, \"shortNameTranslation\": {\"ar\": \"\\u062c. \\u0643\\u0648\\u0644\", \"bn\": \"\\u099c\\u09bf. \\u0995\\u09cb\\u09b2\", \"hi\": \"\\u091c\\u0940. \\u0915\\u094b\\u0932\", \"ru\": \"\\u0413. \\u041a\\u043e\\u0443\\u043b\"}}, \"team\": {\"id\": 84917477, \"name\": \"New York Yankees\", \"shortName\": \"Yankees\", \"fullName\": null, \"nameCode\": \"NYY\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 71809, \"sport\": {\"name\": \"Baseball\"}, \"country\": {\"name\": \"USA\", \"alpha2\": \"US\", \"alpha3\": \"USA\"}, \"teamColors\": {\"primary\": \"#000066\", \"secondary\": \"#000066\", \"text\": \"#000066\"}, \"fieldTranslations\": {\"nam\u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/team/{teamId}/rankings",
+      "calledPath": "team/84917477/rankings",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 404,
+      "bytes": 339,
+      "error": "Enrichment \"rankings\" for baseball team 84917477 was not found.",
+      "classification": {
+        "http": 404,
+        "bytes": 339,
+        "responseKind": "error envelope",
+        "topLevelKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "details",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": {
+          "statusCode": 404,
+          "message": "Enrichment \"rankings\" for baseball team 84917477 was not found.",
+          "error": "NotFound",
+          "details": {
+            "code": "ENRICHMENT_NOT_FOUND",
+            "reason": "no_data_recorded"
+          }
+        },
+        "notes": []
+      },
+      "bodyPreview": "{\"statusCode\": 404, \"message\": \"Enrichment \\\"rankings\\\" for baseball team 84917477 was not found.\", \"error\": \"NotFound\", \"details\": {\"code\": \"ENRICHMENT_NOT_FOUND\", \"reason\": \"no_data_recorded\"}, \"path\": \"/api/v1/baseball/team/84917477/rankings?page=1&limit=5\", \"timestamp\": \"2026-10-21T12:31:30.539Z\", \"requestId\": \"09678a37-aff4-4599-8e88-1924b35c8c67\"}"
+    },
+    {
+      "routeTemplate": "/v1/baseball/team/{teamId}/standings-seasons",
+      "calledPath": "team/84917477/standings-seasons",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 12469,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 12469,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "uniqueTournamentSeasons",
+          "tournamentSeasons",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "uniqueTournamentSeasons",
+        "listCount": 2,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 4,
+          "totalPages": 1,
+          "hasMore": false
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "uniqueTournament",
+          "seasons"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"uniqueTournamentSeasons\": [{\"uniqueTournament\": {\"id\": 53168725, \"name\": \"MLB\", \"userCount\": 19796, \"primaryColorHex\": \"#051E42\", \"secondaryColorHex\": \"#BF0D3E\", \"category\": {\"name\": \"USA\", \"flag\": \"usa\", \"alpha2\": \"US\", \"country\": null, \"sport\": {\"name\": \"Baseball\"}, \"priority\": 1, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0627\\u0644\\u0648\\u0644\\u0627\\u064a\\u0627\\u062a \\u0627\\u0644\\u0645\\u062a\\u062d\\u062f\\u0629\", \"bn\": \"\\u09af\\u09c1\\u0995\\u09cd\\u09a4\\u09b0\\u09be\\u09b7\\u09cd\\u099f\\u09cd\\u09b0\", \"hi\": \"\\u0938\\u0902\\u092f\\u0941\\u0915\\u094d\\u0924 \\u0930\\u093e\\u091c\\u094d\\u092f \\u0905\\u092e\\u0947\\u0930\\u093f\\u0915\\u093e\", \"ru\": \"\\u0421\\u043e\\u0435\\u0434\\u0438\\u043d\\u0435\\u043d\\u043d\\u044b\\u0435 \\u0428\\u0442\\u0430\\u0442\\u044b\"}}}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u062f\\u0648\\u0631\\u064a \\u0627\\u0644\\u0628\\u064a\\u0633\\u0628\\u0648\\u0644 \\u0627\\u0644\\u0631\\u0626\\u064a\\u0633\\u064a\", \"bn\": \"\\u098f\\u09ae\\u098f\\u09b2\\u09ac\\u09bf\", \"hi\": \"\\u090f\\u092e\\u090f\\u0932\\u092c\\u0940\", \"ru\": \"MLB\"}}, \"hasPerformanceGraphFeature\": false, \"hasEventPlayerStatistics\": false, \"displayInverseHomeAwayTeams\": true, \"tennisPoints\": null}, \"seasons\": [{\"id\": 68144200, \"name\": \"MLB 2026\u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/team/{teamId}/unique-tournaments",
+      "calledPath": "team/84917477/unique-tournaments",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 2379,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 2379,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "uniqueTournaments",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "uniqueTournaments",
+        "listCount": 3,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 3,
+          "totalPages": 1,
+          "hasMore": false
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "name",
+          "userCount",
+          "primaryColorHex",
+          "secondaryColorHex",
+          "category",
+          "fieldTranslations",
+          "hasPerformanceGraphFeature",
+          "hasEventPlayerStatistics",
+          "displayInverseHomeAwayTeams",
+          "tennisPoints"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"uniqueTournaments\": [{\"id\": 53168725, \"name\": \"MLB\", \"userCount\": 19796, \"primaryColorHex\": \"#051E42\", \"secondaryColorHex\": \"#BF0D3E\", \"category\": {\"name\": \"USA\", \"flag\": \"usa\", \"alpha2\": \"US\", \"country\": null, \"sport\": {\"name\": \"Baseball\"}, \"priority\": 1, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0627\\u0644\\u0648\\u0644\\u0627\\u064a\\u0627\\u062a \\u0627\\u0644\\u0645\\u062a\\u062d\\u062f\\u0629\", \"bn\": \"\\u09af\\u09c1\\u0995\\u09cd\\u09a4\\u09b0\\u09be\\u09b7\\u09cd\\u099f\\u09cd\\u09b0\", \"hi\": \"\\u0938\\u0902\\u092f\\u0941\\u0915\\u094d\\u0924 \\u0930\\u093e\\u091c\\u094d\\u092f \\u0905\\u092e\\u0947\\u0930\\u093f\\u0915\\u093e\", \"ru\": \"\\u0421\\u043e\\u0435\\u0434\\u0438\\u043d\\u0435\\u043d\\u043d\\u044b\\u0435 \\u0428\\u0442\\u0430\\u0442\\u044b\"}}}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u062f\\u0648\\u0631\\u064a \\u0627\\u0644\\u0628\\u064a\\u0633\\u0628\\u0648\\u0644 \\u0627\\u0644\\u0631\\u0626\\u064a\\u0633\\u064a\", \"bn\": \"\\u098f\\u09ae\\u098f\\u09b2\\u09ac\\u09bf\", \"hi\": \"\\u090f\\u092e\\u090f\\u0932\\u092c\\u0940\", \"ru\": \"MLB\"}}, \"hasPerformanceGraphFeature\": null, \"hasEventPlayerStatistics\": null, \"displayInverseHomeAwayTeams\": true, \"tennisPoints\": null}, {\"id\": 83184385, \"name\": \"MLB, Preseason\", \"userCount\": 2562, \"primaryColor\u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/teams",
+      "calledPath": "teams",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 399,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 399,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "items",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "items",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 255,
+          "totalPages": 51,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "name",
+          "countryAlpha2"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"items\": [{\"id\": 84917477, \"name\": \"New York Yankees\", \"countryAlpha2\": null}, {\"id\": 59038784, \"name\": \"Los Angeles Dodgers\", \"countryAlpha2\": null}, {\"id\": 85599489, \"name\": \"\\u00c1guilas Cibae\\u00f1as\", \"countryAlpha2\": \"DO\"}, {\"id\": 76863413, \"name\": \"Gigantes Del Cibao\", \"countryAlpha2\": \"DO\"}, {\"id\": 12522560, \"name\": \"Estrellas Orientales\", \"countryAlpha2\": \"DO\"}], \"page\": 1, \"limit\": 5, \"total\": 255, \"totalPages\": 51, \"hasMore\": true}"
+    },
+    {
+      "routeTemplate": "/v1/baseball/tournaments",
+      "calledPath": "tournaments",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 908,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 908,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "items",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "items",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 84,
+          "totalPages": 17,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "name",
+          "categoryName",
+          "countryAlpha2",
+          "logoUrl"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"items\": [{\"id\": 53168725, \"name\": \"MLB\", \"categoryName\": \"USA\", \"countryAlpha2\": \"US\", \"logoUrl\": \"https://sports-api.sportsdata365.com/msdata/v1/images/tournaments/53168725\"}, {\"id\": 89027567, \"name\": \"World Baseball Classic\", \"categoryName\": \"World\", \"countryAlpha2\": null, \"logoUrl\": \"https://sports-api.sportsdata365.com/msdata/v1/images/tournaments/89027567\"}, {\"id\": 11057019, \"name\": \"KBO\", \"categoryName\": \"South Korea\", \"countryAlpha2\": \"KR\", \"logoUrl\": \"https://sports-api.sportsdata365.com/msdata/v1/images/tournaments/11057019\"}, {\"id\": 54327154, \"name\": \"Pro Yakyu - NPB\", \"categoryName\": \"Japan\", \"countryAlpha2\": \"JP\", \"logoUrl\": \"https://sports-api.sportsdata365.com/msdata/v1/images/tournaments/54327154\"}, {\"id\": 66710392, \"name\": \"LMB\", \"categoryName\": \"Mexico\", \"countryAlpha2\": \"MX\", \"logoUrl\": \"https://sports-api.sportsdata365.com/msdata/v1/images/tournaments/66710392\"}], \"page\": 1, \"limit\": 5, \"total\": 84, \"totalPages\": 17, \"hasMore\": true}"
+    },
+    {
+      "routeTemplate": "/v1/baseball/unique-tournament/{tournamentId}",
+      "calledPath": "unique-tournament/53168725",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 782,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 782,
+        "responseKind": "competition object",
+        "topLevelKeys": [
+          "uniqueTournament"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": [
+          "id",
+          "name",
+          "userCount",
+          "primaryColorHex",
+          "secondaryColorHex",
+          "category",
+          "fieldTranslations",
+          "hasPerformanceGraphFeature",
+          "hasEventPlayerStatistics",
+          "displayInverseHomeAwayTeams",
+          "tennisPoints"
+        ],
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"uniqueTournament\": {\"id\": 53168725, \"name\": \"MLB\", \"userCount\": 19813, \"primaryColorHex\": \"#051E42\", \"secondaryColorHex\": \"#BF0D3E\", \"category\": {\"name\": \"USA\", \"flag\": \"usa\", \"alpha2\": \"US\", \"country\": {\"name\": \"USA\", \"alpha2\": \"US\", \"alpha3\": \"USA\"}, \"sport\": {\"name\": \"Baseball\"}, \"priority\": 1, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0627\\u0644\\u0648\\u0644\\u0627\\u064a\\u0627\\u062a \\u0627\\u0644\\u0645\\u062a\\u062d\\u062f\\u0629\", \"bn\": \"\\u09af\\u09c1\\u0995\\u09cd\\u09a4\\u09b0\\u09be\\u09b7\\u09cd\\u099f\\u09cd\\u09b0\", \"hi\": \"\\u0938\\u0902\\u092f\\u0941\\u0915\\u094d\\u0924 \\u0930\\u093e\\u091c\\u094d\\u092f \\u0905\\u092e\\u0947\\u0930\\u093f\\u0915\\u093e\", \"ru\": \"\\u0421\\u043e\\u0435\\u0434\\u0438\\u043d\\u0435\\u043d\\u043d\\u044b\\u0435 \\u0428\\u0442\\u0430\\u0442\\u044b\"}}}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u062f\\u0648\\u0631\\u064a \\u0627\\u0644\\u0628\\u064a\\u0633\\u0628\\u0648\\u0644 \\u0627\\u0644\\u0631\\u0626\\u064a\\u0633\\u064a\", \"bn\": \"\\u098f\\u09ae\\u098f\\u09b2\\u09ac\\u09bf\", \"hi\": \"\\u090f\\u092e\\u090f\\u0932\\u092c\\u0940\", \"ru\": \"MLB\"}}, \"hasPerformanceGraphFeature\": false, \"hasEventPlayerStatistics\": false, \"displayInverseHomeAwayTeams\": true, \"tennisPoints\": null}}"
+    },
+    {
+      "routeTemplate": "/v1/baseball/unique-tournament/{tournamentId}/events",
+      "calledPath": "unique-tournament/53168725/events",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 44544,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 44544,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "events",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "events",
+        "listCount": 10,
+        "pagination": {
+          "page": 1,
+          "limit": 10,
+          "total": 29267,
+          "totalPages": 2927,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "homeTeam",
+          "awayTeam",
+          "tournament",
+          "season",
+          "roundInfo",
+          "status",
+          "statusType",
+          "startTimestamp",
+          "endTimestamp",
+          "sourceUpdatedAt",
+          "homeScore",
+          "awayScore",
+          "format",
+          "winnerCode",
+          "venue",
+          "time",
+          "hasGlobalHighlights",
+          "finalResultOnly",
+          "toss",
+          "officials"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"events\": [{\"id\": 95774708, \"homeTeam\": {\"id\": 38903508, \"name\": \"Minnesota Twins\", \"shortName\": \"Twins\", \"fullName\": null, \"nameCode\": \"MIN\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": null, \"userCount\": 17670, \"sport\": {\"name\": \"Baseball\"}, \"country\": null, \"teamColors\": {\"primary\": \"#000066\", \"secondary\": \"#000066\", \"text\": \"#000066\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0645\\u064a\\u0646\\u064a\\u0633\\u0648\\u062a\\u0627 \\u062a\\u0648\\u064a\\u0646\\u0632\", \"ru\": \"\\u041c\\u0438\\u043d\\u043d\\u0435\\u0441\\u043e\\u0442\\u0430 \\u0422\\u0432\\u0438\\u043d\\u0441\"}, \"shortNameTranslation\": {\"ar\": \"\\u062a\\u0648\\u064a\\u0646\\u0632\", \"bn\": \"\\u099f\\u09c1\\u0987\\u09a8\", \"hi\": \"\\u091f\\u094d\\u0935\\u093f\\u0928\\u094d\\u0938\", \"ru\": \"\\u0422\\u0432\\u0438\\u043d\\u0441\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"awayTeam\": {\"id\": 27821810, \"name\": \"Cleveland Guardians\", \"shortName\": \"Guardians\", \"fullName\": null, \"nameCode\": \"CLE\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 34998, \"sport\": {\"name\": \"Baseball\"}, \"country\": null, \"teamColors\": {\u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/unique-tournament/{tournamentId}/scheduled-events/{date}",
+      "calledPath": "unique-tournament/53168725/scheduled-events/2026-10-21",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 4014,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 4014,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "events",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "events",
+        "listCount": 1,
+        "pagination": {
+          "page": 1,
+          "limit": 10,
+          "total": 1,
+          "totalPages": 1,
+          "hasMore": false
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "homeTeam",
+          "awayTeam",
+          "tournament",
+          "season",
+          "roundInfo",
+          "status",
+          "statusType",
+          "startTimestamp",
+          "endTimestamp",
+          "sourceUpdatedAt",
+          "homeScore",
+          "awayScore",
+          "format",
+          "winnerCode",
+          "venue",
+          "time",
+          "hasGlobalHighlights",
+          "finalResultOnly",
+          "toss",
+          "officials"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"events\": [{\"id\": 28606880, \"homeTeam\": {\"id\": 20869353, \"name\": \"Tampa Bay Rays\", \"shortName\": \"Rays\", \"fullName\": null, \"nameCode\": \"TB\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 35536, \"sport\": {\"name\": \"Baseball\"}, \"country\": {\"name\": \"USA\", \"alpha2\": \"US\", \"alpha3\": \"USA\"}, \"teamColors\": {\"primary\": \"#000066\", \"secondary\": \"#000066\", \"text\": \"#000066\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u062a\\u0627\\u0645\\u0628\\u0627 \\u0628\\u0627\\u064a \\u0631\\u0627\\u064a\\u0632\", \"ru\": \"\\u0422\\u0430\\u043c\\u043f\\u0430-\\u0411\\u044d\\u0439 \\u0420\\u0435\\u0439\\u0441\"}, \"shortNameTranslation\": {\"ar\": \"\\u0631\\u0627\\u064a\\u0632\", \"bn\": \"\\u09b0\\u09c7\", \"hi\": \"\\u0930\\u0947\\u091c\", \"ru\": \"\\u0420\\u0435\\u0439\\u0441\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"awayTeam\": {\"id\": 27821810, \"name\": \"Cleveland Guardians\", \"shortName\": \"Guardians\", \"fullName\": null, \"nameCode\": \"CLE\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 30918, \"sport\": {\"name\": \"Baseball\"}, \"country\": {\"name\": \"USA\", \"alpha2\": \"US\", \"alpha3\": \"\u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/unique-tournament/{tournamentId}/season/{seasonId}/round/{round}",
+      "calledPath": "unique-tournament/53168725/season/68144200/round/1",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 48566,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 48566,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "events",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "events",
+        "listCount": 10,
+        "pagination": {
+          "page": 1,
+          "limit": 10,
+          "total": 2458,
+          "totalPages": 246,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "homeTeam",
+          "awayTeam",
+          "tournament",
+          "season",
+          "roundInfo",
+          "status",
+          "statusType",
+          "startTimestamp",
+          "endTimestamp",
+          "sourceUpdatedAt",
+          "homeScore",
+          "awayScore",
+          "format",
+          "winnerCode",
+          "venue",
+          "time",
+          "hasGlobalHighlights",
+          "finalResultOnly",
+          "toss",
+          "officials"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"events\": [{\"id\": 10813357, \"homeTeam\": {\"id\": 24505893, \"name\": \"San Francisco Giants\", \"shortName\": \"Giants\", \"fullName\": null, \"nameCode\": \"SF\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": null, \"userCount\": 15825, \"sport\": {\"name\": \"Baseball\"}, \"country\": {\"name\": \"USA\", \"alpha2\": \"US\", \"alpha3\": \"USA\"}, \"teamColors\": {\"primary\": \"#000000\", \"secondary\": \"#000000\", \"text\": \"#000000\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0633\\u0627\\u0646 \\u0641\\u0631\\u0627\\u0646\\u0633\\u064a\\u0633\\u0643\\u0648 \\u062c\\u0627\\u064a\\u0646\\u062a\\u0633\", \"ru\": \"\\u0421\\u0430\\u043d-\\u0424\\u0440\\u0430\\u043d\\u0446\\u0438\\u0441\\u043a\\u043e \\u0414\\u0436\\u0430\\u0439\\u0435\\u043d\\u0442\\u0441\"}, \"shortNameTranslation\": {\"ar\": \"\\u062c\\u0627\\u064a\\u0646\\u062a\\u0633\", \"bn\": \"\\u099c\\u09be\\u09af\\u09bc\\u09be\\u09a8\\u09cd\\u099f\\u09b8\", \"hi\": \"\\u091c\\u093e\\u092f\\u0902\\u091f\\u094d\\u0938\", \"ru\": \"\\u0414\\u0436\\u0430\\u0439\\u0435\\u043d\\u0442\\u0441\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"awayTeam\": {\"id\": 84917477, \"name\": \"New York Yankees\", \"shortName\": \"Yankees\", \"fullName\": null, \u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/unique-tournament/{tournamentId}/season/{seasonId}/standings/{type}",
+      "calledPath": "unique-tournament/53168725/season/68144200/standings/total",
+      "query": null,
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 38810,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 38810,
+        "responseKind": "list envelope",
+        "topLevelKeys": [
+          "standings"
+        ],
+        "listKey": "standings",
+        "listCount": 1,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "type",
+          "descriptions",
+          "rows"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"standings\": [{\"type\": \"total\", \"descriptions\": [], \"rows\": [{\"team\": {\"id\": 85714484, \"name\": \"Milwaukee Brewers\"}, \"position\": 1, \"matches\": 162, \"wins\": 103, \"draws\": 0, \"losses\": 59, \"scoresFor\": 832, \"scoresAgainst\": 618, \"points\": 0, \"scoreDiffFormatted\": \"+214\", \"promotion\": {\"text\": \"Playoffs\"}, \"netRunRate\": null, \"noResults\": null, \"oversFor\": null, \"oversAgainst\": null, \"group\": \"MLB\", \"gamesBehind\": \"0.0\", \"winPercentage\": \"0.6360\", \"overtimeWins\": null, \"overtimeLosses\": null, \"penaltyWins\": null, \"penaltyLosses\": null}, {\"team\": {\"id\": 85714484, \"name\": \"Milwaukee Brewers\"}, \"position\": 1, \"matches\": 162, \"wins\": 103, \"draws\": 0, \"losses\": 59, \"scoresFor\": 832, \"scoresAgainst\": 618, \"points\": 0, \"scoreDiffFormatted\": \"+214\", \"promotion\": {\"text\": \"Playoffs\"}, \"netRunRate\": null, \"noResults\": null, \"oversFor\": null, \"oversAgainst\": null, \"group\": \"National League\", \"gamesBehind\": \"0.0\", \"winPercentage\": \"0.6360\", \"overtimeWins\": null, \"overtimeLosses\": null, \"penaltyWins\": null, \"penaltyLosses\": null}, {\"team\": {\"id\": 27821810, \"name\": \"Cleveland Guardians\"}, \"position\": 1, \"matches\": 162, \"wins\": 85, \"draws\": 0, \"losses\": 77, \"scoresFor\": 678, \"scoresAgainst\": 667, \"\u2026"
+    },
+    {
+      "routeTemplate": "/v1/baseball/unique-tournament/{tournamentId}/seasons",
+      "calledPath": "unique-tournament/53168725/seasons",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 67599823,
+        "teamId": 84917477,
+        "playerId": 71698966,
+        "tournamentId": 53168725,
+        "seasonId": 68144200,
+        "managerId": 62643844,
+        "date": "2026-10-21"
+      },
+      "http": 200,
+      "bytes": 415,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 415,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "seasons",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore",
+          "currentSeasonId"
+        ],
+        "listKey": "seasons",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 24,
+          "totalPages": 5,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "name",
+          "year",
+          "editor"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"seasons\": [{\"id\": 68144200, \"name\": \"MLB 2026\", \"year\": \"2026\", \"editor\": false}, {\"id\": 46588608, \"name\": \"MLB 2025\", \"year\": \"2025\", \"editor\": false}, {\"id\": 97699540, \"name\": \"MLB 2024\", \"year\": \"2024\", \"editor\": false}, {\"id\": 16181216, \"name\": \"MLB 2023\", \"year\": \"2023\", \"editor\": false}, {\"id\": 62071905, \"name\": \"MLB 2022\", \"year\": \"2022\", \"editor\": false}], \"page\": 1, \"limit\": 5, \"total\": 24, \"totalPages\": 5, \"hasMore\": true, \"currentSeasonId\": 68144200}"
+    }
+  ],
+  "extraProbes": [
+    {
+      "label": "events status=finished",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 5,
+        "status": "finished"
+      },
+      "http": 200,
+      "classification": {
+        "http": 200,
+        "bytes": 72,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "items",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "items",
+        "listCount": 0,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 0,
+          "totalPages": 0,
+          "hasMore": false
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"items\": [], \"page\": 1, \"limit\": 5, \"total\": 0, \"totalPages\": 0, \"hasMore\": false}"
+    },
+    {
+      "label": "events status=inprogress",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 5,
+        "status": "inprogress"
+      },
+      "http": 200,
+      "classification": {
+        "http": 200,
+        "bytes": 72,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "items",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "items",
+        "listCount": 0,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 0,
+          "totalPages": 0,
+          "hasMore": false
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"items\": [], \"page\": 1, \"limit\": 5, \"total\": 0, \"totalPages\": 0, \"hasMore\": false}"
+    },
+    {
+      "label": "events page=9999",
+      "path": "events",
+      "params": {
+        "page": 9999,
+        "limit": 5
+      },
+      "http": 200,
+      "classification": {
+        "http": 200,
+        "bytes": 76,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "items",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "items",
+        "listCount": 0,
+        "pagination": {
+          "page": 9999,
+          "limit": 5,
+          "total": 18,
+          "totalPages": 4,
+          "hasMore": false
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"items\": [], \"page\": 9999, \"limit\": 5, \"total\": 18, \"totalPages\": 4, \"hasMore\": false}"
+    },
+    {
+      "label": "events page=2 differs from page=1",
+      "path": "events",
+      "params": {
+        "page": 2,
+        "limit": 5
+      },
+      "http": 200,
+      "classification": {
+        "http": 200,
+        "bytes": 1546,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "items",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "items",
+        "listCount": 5,
+        "pagination": {
+          "page": 2,
+          "limit": 5,
+          "total": 18,
+          "totalPages": 4,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "tournamentId",
+          "homeTeam",
+          "awayTeam",
+          "startTimestamp",
+          "status",
+          "homeScore",
+          "awayScore",
+          "seasonId",
+          "competitionName"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"items\": [{\"id\": 56340050, \"tournamentId\": 67266355, \"homeTeam\": {\"id\": 42864934, \"name\": \"Toros De Camag\\u00fcey\"}, \"awayTeam\": {\"id\": 37530703, \"name\": \"Gallos de Sancti Spiritus\"}, \"startTimestamp\": 1792603800, \"status\": \"notstarted\", \"homeScore\": {}, \"awayScore\": {}, \"seasonId\": 46347278, \"competitionName\": \"Serie Nacional\"}, {\"id\": 18038332, \"tournamentId\": 67266355, \"homeTeam\": {\"id\": 32060366, \"name\": \"Azucareros de Villa Clara\"}, \"awayTeam\": {\"id\": 75016482, \"name\": \"Huracanes de Mayabeque\"}, \"startTimestamp\": 1792603800, \"status\": \"notstarted\", \"homeScore\": {}, \"awayScore\": {}, \"seasonId\": 46347278, \"competitionName\": \"Serie Nacional\"}, {\"id\": 91784317, \"tournamentId\": 67266355, \"homeTeam\": {\"id\": 40145036, \"name\": \"Tigres de Ciego de Avila\"}, \"awayTeam\": {\"id\": 95724522, \"name\": \"Le\\u00f1adores de Las Tunas\"}, \"startTimestamp\": 1792603800, \"status\": \"notstarted\", \"homeScore\": {}, \"awayScore\": {}, \"seasonId\": 46347278, \"competitionName\": \"Serie Nacional\"}, {\"id\": 23484789, \"tournamentId\": 67266355, \"homeTeam\": {\"id\": 97460093, \"name\": \"Elefantes de Cienfuegos\"}, \"awayTeam\": {\"id\": 99464481, \"name\": \"Cocodrilos de Matanzas\"}, \"startTimestamp\": 1792603800, \"status\": \"notsta\u2026",
+      "paginationCheck": {
+        "page1FirstId": 28606880,
+        "page2FirstId": 56340050,
+        "differentPages": true
+      }
+    },
+    {
+      "label": "search missing q",
+      "path": "search",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 400,
+      "classification": {
+        "http": 400,
+        "bytes": 392,
+        "responseKind": "error envelope",
+        "topLevelKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": {
+          "statusCode": 400,
+          "message": [
+            "q may only contain letters, numbers, spaces, apostrophes, periods, and hyphens",
+            "q must be shorter than or equal to 80 characters",
+            "q must be longer than or equal to 2 characters",
+            "q must be a string"
+          ],
+          "error": "Bad Request",
+          "details": null
+        },
+        "notes": []
+      },
+      "bodyPreview": "{\"statusCode\": 400, \"message\": [\"q may only contain letters, numbers, spaces, apostrophes, periods, and hyphens\", \"q must be shorter than or equal to 80 characters\", \"q must be longer than or equal to 2 characters\", \"q must be a string\"], \"error\": \"Bad Request\", \"path\": \"/api/v1/baseball/search?page=1&limit=5\", \"timestamp\": \"2026-10-21T12:31:37.827Z\", \"requestId\": \"76c19d20-91c9-4e59-81aa-5bdf4b8959c6\"}"
+    },
+    {
+      "label": "event id non-numeric",
+      "path": "event/abc",
+      "params": null,
+      "http": 400,
+      "classification": {
+        "http": 400,
+        "bytes": 242,
+        "responseKind": "error envelope",
+        "topLevelKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": {
+          "statusCode": 400,
+          "message": "Event id abc is neither a numeric id nor a live-only match ref.",
+          "error": "Bad Request",
+          "details": null
+        },
+        "notes": []
+      },
+      "bodyPreview": "{\"statusCode\": 400, \"message\": \"Event id abc is neither a numeric id nor a live-only match ref.\", \"error\": \"Bad Request\", \"path\": \"/api/v1/baseball/event/abc\", \"timestamp\": \"2026-10-21T12:31:38.225Z\", \"requestId\": \"d2e82c3f-9f15-4683-b351-530b36ab1580\"}"
+    },
+    {
+      "label": "event id unknown",
+      "path": "event/999999999",
+      "params": null,
+      "http": 404,
+      "classification": {
+        "http": 404,
+        "bytes": 280,
+        "responseKind": "error envelope",
+        "topLevelKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "details",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": {
+          "statusCode": 404,
+          "message": "Baseball match 999999999 was not found.",
+          "error": "NotFound",
+          "details": {
+            "code": "EVENT_NOT_FOUND",
+            "reason": "unknown_id"
+          }
+        },
+        "notes": []
+      },
+      "bodyPreview": "{\"statusCode\": 404, \"message\": \"Baseball match 999999999 was not found.\", \"error\": \"NotFound\", \"details\": {\"code\": \"EVENT_NOT_FOUND\", \"reason\": \"unknown_id\"}, \"path\": \"/api/v1/baseball/event/999999999\", \"timestamp\": \"2026-10-21T12:31:38.671Z\", \"requestId\": \"71da08fb-ac0c-44b9-8b69-4d979880dbe3\"}"
+    },
+    {
+      "label": "standings home",
+      "path": "unique-tournament/53168725/season/68144200/standings/home",
+      "params": null,
+      "http": 200,
+      "classification": {
+        "http": 200,
+        "bytes": 59,
+        "responseKind": "list envelope",
+        "topLevelKeys": [
+          "standings"
+        ],
+        "listKey": "standings",
+        "listCount": 1,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "type",
+          "descriptions",
+          "rows"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"standings\": [{\"type\": \"home\", \"descriptions\": [], \"rows\": []}]}"
+    },
+    {
+      "label": "standings away",
+      "path": "unique-tournament/53168725/season/68144200/standings/away",
+      "params": null,
+      "http": 200,
+      "classification": {
+        "http": 200,
+        "bytes": 59,
+        "responseKind": "list envelope",
+        "topLevelKeys": [
+          "standings"
+        ],
+        "listKey": "standings",
+        "listCount": 1,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "type",
+          "descriptions",
+          "rows"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"standings\": [{\"type\": \"away\", \"descriptions\": [], \"rows\": []}]}"
+    },
+    {
+      "label": "player events next",
+      "path": "player/71698966/events/next",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "classification": {
+        "http": 200,
+        "bytes": 73,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "events",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "events",
+        "listCount": 0,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 0,
+          "totalPages": 0,
+          "hasMore": false
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"events\": [], \"page\": 1, \"limit\": 5, \"total\": 0, \"totalPages\": 0, \"hasMore\": false}"
+    },
+    {
+      "label": "team events next",
+      "path": "team/84917477/events/next",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "classification": {
+        "http": 200,
+        "bytes": 73,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "events",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "events",
+        "listCount": 0,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 0,
+          "totalPages": 0,
+          "hasMore": false
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"events\": [], \"page\": 1, \"limit\": 5, \"total\": 0, \"totalPages\": 0, \"hasMore\": false}"
+    }
+  ]
+}

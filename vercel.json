@@ -1,0 +1,10 @@
+{
+  "framework": null,
+  "installCommand": "pnpm install",
+  "buildCommand": "pnpm --filter @baseball/web build",
+  "outputDirectory": "apps/web/dist",
+  "rewrites": [
+    { "source": "/msdata/:path*", "destination": "/api/msdata/:path*" },
+    { "source": "/((?!api/|msdata/).*)", "destination": "/index.html" }
+  ]
+}

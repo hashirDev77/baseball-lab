@@ -1,0 +1,17 @@
+{
+  "name": "baseball-product",
+  "private": true,
+  "description": "Simple React app that calls SportsAPI365 baseball /v1/baseball routes",
+  "scripts": {
+    "dev": "pnpm --filter @baseball/web dev",
+    "build": "pnpm --filter @baseball/web build",
+    "audit:variations": "python3 scripts/probe_variations.py"
+  },
+  "packageManager": "pnpm@11.1.2",
+  "engines": {
+    "node": ">=20"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  }
+}
