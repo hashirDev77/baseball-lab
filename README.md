@@ -7,8 +7,8 @@ React frontend for the **deployed** SportsAPI365 baseball API (`/v1/baseball/*`)
 Copy `.env.example` to `.env` and set the keys:
 
 ```bash
-pnpm install
-pnpm dev
+npm install
+npm run dev
 ```
 
 Open `http://127.0.0.1:5175`.

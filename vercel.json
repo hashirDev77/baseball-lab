@@ -1,9 +1,12 @@
 {
-  "framework": "vite",
-  "buildCommand": "pnpm build",
-  "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/msdata/:path*", "destination": "https://sports-api.sportsdata365.com/msdata/:path*" },
-    { "source": "/((?!msdata/).*)", "destination": "/index.html" }
+    {
+      "source": "/msdata/:path*",
+      "destination": "https://sports-api.sportsdata365.com/msdata/:path*"
+    },
+    {
+      "source": "/((?!msdata/).*)",
+      "destination": "/index.html"
+    }
   ]
 }

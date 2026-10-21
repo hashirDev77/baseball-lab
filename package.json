@@ -1,15 +1,16 @@
 {
   "name": "baseball-product",
   "private": true,
+  "version": "0.1.0",
   "type": "module",
-  "description": "React frontend that calls the deployed SportsAPI365 baseball API",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc --noEmit && vite build",
-    "preview": "vite preview",
-    "audit:variations": "python3 scripts/probe_variations.py"
+    "dev": "node init && vite",
+    "build": "node init && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.4.0"
@@ -20,9 +21,5 @@
     "@vitejs/plugin-react": "^4.3.4",
     "typescript": "^5.8.2",
     "vite": "^6.2.2"
-  },
-  "packageManager": "pnpm@11.1.2",
-  "engines": {
-    "node": ">=20"
   }
 }
