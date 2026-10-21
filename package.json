@@ -24,8 +24,5 @@
   "packageManager": "pnpm@11.1.2",
   "engines": {
     "node": ">=20"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": ["esbuild"]
   }
 }
