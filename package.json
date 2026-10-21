@@ -1,14 +1,31 @@
 {
   "name": "baseball-product",
   "private": true,
-  "description": "Simple React app that calls SportsAPI365 baseball /v1/baseball routes",
+  "type": "module",
+  "description": "React frontend that calls the deployed SportsAPI365 baseball API",
   "scripts": {
-    "dev": "pnpm --filter @baseball/web dev",
-    "build": "pnpm --filter @baseball/web build",
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
     "audit:variations": "python3 scripts/probe_variations.py"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.4.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.2"
   },
   "packageManager": "pnpm@11.1.2",
   "engines": {
     "node": ">=20"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
   }
 }

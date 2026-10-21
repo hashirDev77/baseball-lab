@@ -1,10 +1,9 @@
 {
-  "framework": null,
-  "installCommand": "pnpm install",
-  "buildCommand": "pnpm --filter @baseball/web build",
-  "outputDirectory": "apps/web/dist",
+  "framework": "vite",
+  "buildCommand": "pnpm build",
+  "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/msdata/:path*", "destination": "/api/msdata/:path*" },
-    { "source": "/((?!api/|msdata/).*)", "destination": "/index.html" }
+    { "source": "/msdata/:path*", "destination": "https://sports-api.sportsdata365.com/msdata/:path*" },
+    { "source": "/((?!msdata/).*)", "destination": "/index.html" }
   ]
 }

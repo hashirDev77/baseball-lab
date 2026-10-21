@@ -23,11 +23,11 @@ def load_env() -> tuple[str, dict[str, str]]:
         if "=" in line and not line.strip().startswith("#"):
             k, v = line.split("=", 1)
             env[k.strip()] = v.strip().strip('"').strip("'")
-    base = env["MSDATA_BASE_URL"].rstrip("/")
+    base = (env.get("MSDATA_BASE_URL") or env.get("VITE_MSDATA_BASE_URL") or "https://sports-api.sportsdata365.com/msdata").rstrip("/")
     headers = {
         "accept": "application/json",
-        "x-apim-key": env["MSDATA_API_KEY"],
-        "X-Live-Key": env["MSDATA_LIVE_KEY"],
+        "x-apim-key": env.get("MSDATA_API_KEY") or env.get("VITE_MSDATA_API_KEY") or "",
+        "X-Live-Key": env.get("MSDATA_LIVE_KEY") or env.get("VITE_MSDATA_LIVE_KEY") or "",
     }
     return base, headers
 

@@ -2,11 +2,21 @@
 
 export type Json = Record<string, unknown>;
 
-/** Same-origin proxy: Vite in local, Vercel Edge in production. Keys stay server-side. */
+const UPSTREAM = (import.meta.env.VITE_MSDATA_BASE_URL || "https://sports-api.sportsdata365.com/msdata").replace(
+  /\/$/,
+  "",
+);
+
+/** Same-origin /msdata so a static host can rewrite to the deployed API (avoids browser CORS). */
 export const BASE = "/msdata";
 
 function headers(): HeadersInit {
-  return { accept: "application/json" };
+  const next: Record<string, string> = { accept: "application/json" };
+  const apim = import.meta.env.VITE_MSDATA_API_KEY;
+  const live = import.meta.env.VITE_MSDATA_LIVE_KEY;
+  if (apim) next["x-apim-key"] = apim;
+  if (live) next["X-Live-Key"] = live;
+  return next;
 }
 
 export interface MsdataResult<T = Json> {
@@ -38,11 +48,31 @@ export async function baseballGet<T = Json>(
       return { endpoint, status: response.status, body: null, error: "Response was not JSON" };
     }
     const rec = body && typeof body === "object" ? (body as Json) : null;
-    const error = !response.ok ? String(rec?.message || rec?.error || `HTTP ${response.status}`) : undefined;
+    const error = !response.ok ? apiErrorText(rec, response.status) : undefined;
     return { endpoint, status: response.status, body, error };
   } catch (err) {
     return { endpoint, status: 0, body: null, error: err instanceof Error ? err.message : String(err) };
   }
+}
+
+function apiErrorText(rec: Json | null, status: number): string {
+  const raw = rec?.message ?? rec?.error ?? rec?.detail;
+  if (typeof raw === "string" && raw.trim()) return raw;
+  if (raw && typeof raw === "object") {
+    const obj = raw as Json;
+    if (typeof obj.message === "string") return obj.message;
+    if (typeof obj.code === "string") return obj.code;
+    try {
+      return JSON.stringify(raw);
+    } catch {
+      /* fall through */
+    }
+  }
+  if (status === 401 || status === 403) {
+    return `HTTP ${status}: API key missing or rejected. Set VITE_MSDATA_API_KEY and VITE_MSDATA_LIVE_KEY.`;
+  }
+  if (status === 404) return `HTTP 404: ${UPSTREAM} returned not found.`;
+  return `HTTP ${status}`;
 }
 
 export function asRecord(value: unknown): Json | null {

@@ -11,4 +11,4 @@ Regenerate evidence:
 python3 ../scripts/probe_all_endpoints.py
 ```
 
-Requires `.env` at repo root with `MSDATA_BASE_URL`, `MSDATA_API_KEY`, `MSDATA_LIVE_KEY`.
+Requires `.env` at repo root with `VITE_MSDATA_BASE_URL`, `VITE_MSDATA_API_KEY`, `VITE_MSDATA_LIVE_KEY`.

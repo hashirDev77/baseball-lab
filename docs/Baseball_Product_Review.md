@@ -2,13 +2,13 @@
 
 We built a live baseball React app on the SportsAPI365 Baseball API to see if a customer can ship a normal baseball app from the current **42** endpoints. Screens call `/v1/baseball/*` directly (no local backend). Several screens are empty or thin because the deployed API is empty, 404s optional extras, or uses a different list shape.
 
-This document is the user-facing testing playbook and the API improvement list. Live probe evidence lives in [`../data/baseball-endpoint-evidence.json`](../data/baseball-endpoint-evidence.json) and [`../data/baseball-variation-tests.json`](../data/baseball-variation-tests.json). Combined coverage output is [`baseball_api_reports.md`](./baseball_api_reports.md).
+This document is the user-facing testing playbook. The API-team list from the live product is [`baseball_api_improvements.md`](./baseball_api_improvements.md). Live probe evidence lives in [`../data/baseball-endpoint-evidence.json`](../data/baseball-endpoint-evidence.json) and [`../data/baseball-variation-tests.json`](../data/baseball-variation-tests.json). Combined coverage output is [`baseball_api_reports.md`](./baseball_api_reports.md).
 
 ---
 
 ## How to run the product
 
-1. Copy `.env.example` to `.env` and set `MSDATA_API_KEY` and `MSDATA_LIVE_KEY` (same keys as Cricket/Football products).
+1. Copy `.env.example` to `.env` and set `VITE_MSDATA_API_KEY` and `VITE_MSDATA_LIVE_KEY` (same keys as Cricket/Football products).
 2. From the repo root:
 
 ```bash
@@ -122,11 +122,15 @@ A home screen therefore N+1s into `/event/{id}` to print a real scoreboard.
 
 **Needed:** Document empty-vs-unsupported. Keep at-bats off the first paint if the game has not started.
 
-### Player season statistics — **no endpoint**
+### Player season statistics — **missing from the 42-route catalog**
 
-Football/basketball expose `/player/{id}/unique-tournament/{tid}/season/{sid}/statistics`. Baseball does not. The player page cannot show season batting/pitching averages.
+The published baseball catalog does not list season stats. The football-style path **already returns 200** for Ohtani:
 
-**Needed:** Either add season averages, or document that baseball omits this route and clients should use match `player-statistics`.
+`GET /v1/baseball/player/71698966/unique-tournament/53168725/season/68144200/statistics` (battingAvg, HRs, at-bats, …).
+
+The player page still cannot show season averages until this route is catalogued and wired.
+
+**Needed:** Add it to the baseball catalog (or document it as supported).
 
 ### `GET /v1/baseball/search`
 

@@ -1,10 +1,10 @@
 # Baseball Product
 
-A React app that calls the **deployed** SportsAPI365 baseball APIs (`/v1/baseball/*`, 42 routes). There is no local backend.
+React frontend for the **deployed** SportsAPI365 baseball API (`/v1/baseball/*`). This repo is the UI only — no local backend.
 
 ## Run
 
-Copy `.env.example` to `.env` and set `MSDATA_API_KEY` / `MSDATA_LIVE_KEY`:
+Copy `.env.example` to `.env` and set the keys:
 
 ```bash
 pnpm install
@@ -13,27 +13,27 @@ pnpm dev
 
 Open `http://127.0.0.1:5175`.
 
-The browser always calls same-origin `/msdata/v1/baseball/...`. Vite proxies that path locally; Vercel does the same in production. API keys stay in server env, not in the JS bundle.
-
 ## Deploy on Vercel
 
-Import this repo. If Vercel sets **Root Directory** to `apps/web`, leave it — that matches this project. If you leave Root Directory empty, the repo-root `vercel.json` is used instead.
+Import this repo. Leave **Root Directory** empty.
 
-In Vercel → Settings → Environment Variables add:
+In Vercel → Settings → Environment Variables:
 
-- `MSDATA_BASE_URL` = `https://sports-api.sportsdata365.com/msdata`
-- `MSDATA_API_KEY`
-- `MSDATA_LIVE_KEY`
+- `VITE_MSDATA_BASE_URL` = `https://sports-api.sportsdata365.com/msdata`
+- `VITE_MSDATA_API_KEY`
+- `VITE_MSDATA_LIVE_KEY`
 
-Use Production (and Preview if you want). Do not commit `.env`. Redeploy after saving the variables.
+Redeploy after saving. Do not commit `.env`.
+
+The browser talks to same-origin `/msdata/...`. Vercel rewrites that path to the deployed SportsAPI365 host.
 
 ## Layout
 
 | Path | Contents |
 | --- | --- |
-| [`apps/web`](./apps/web) | React UI |
+| [`src/`](./src/) | React UI |
 | [`docs/`](./docs/) | API testing reports |
 | [`data/`](./data/) | Probe evidence |
-| [`scripts/`](./scripts/) | Repeatable Python probes |
+| [`scripts/`](./scripts/) | Optional Python probes |
 
 Start with [`docs/Baseball_Product_Review.md`](./docs/Baseball_Product_Review.md).

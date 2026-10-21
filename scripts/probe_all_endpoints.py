@@ -303,11 +303,11 @@ def discover_ids(base: str, headers: dict[str, str]) -> dict:
 
 def main() -> None:
     env = load_env(ENV_PATH)
-    base = env["MSDATA_BASE_URL"].rstrip("/")
+    base = (env.get("MSDATA_BASE_URL") or env.get("VITE_MSDATA_BASE_URL") or "https://sports-api.sportsdata365.com/msdata").rstrip("/")
     headers = {
         "accept": "application/json",
-        "x-apim-key": env["MSDATA_API_KEY"],
-        "X-Live-Key": env["MSDATA_LIVE_KEY"],
+        "x-apim-key": env.get("MSDATA_API_KEY") or env.get("VITE_MSDATA_API_KEY") or "",
+        "X-Live-Key": env.get("MSDATA_LIVE_KEY") or env.get("VITE_MSDATA_LIVE_KEY") or "",
     }
 
     routes_doc = json.loads(ROUTES_JSON.read_text())
