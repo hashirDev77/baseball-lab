@@ -17,7 +17,7 @@ The browser always calls same-origin `/msdata/v1/baseball/...`. Vite proxies tha
 
 ## Deploy on Vercel
 
-Import this repo with **root directory left empty** (not `apps/web`). `vercel.json` already sets install, build, and `apps/web/dist`.
+Import this repo. If Vercel sets **Root Directory** to `apps/web`, leave it — that matches this project. If you leave Root Directory empty, the repo-root `vercel.json` is used instead.
 
 In Vercel → Settings → Environment Variables add:
 

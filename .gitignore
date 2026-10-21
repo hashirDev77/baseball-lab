@@ -2,6 +2,7 @@ node_modules
 dist
 .env
 .vercel
+.pnpm-store
 data/gaps.json
 data/calls.json
 data/phase1-audit.json

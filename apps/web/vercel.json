@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/msdata/:path*", "destination": "/api/msdata/:path*" },
+    { "source": "/((?!api/|msdata/).*)", "destination": "/index.html" }
+  ]
+}
